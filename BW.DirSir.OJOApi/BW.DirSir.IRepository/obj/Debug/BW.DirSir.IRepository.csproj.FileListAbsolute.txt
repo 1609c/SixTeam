@@ -1,0 +1,9 @@
+D:\大二电商\BW.DirSir.OJOApi\BW.DirSir.IRepository\bin\Debug\BW.DirSir.IRepository.dll
+D:\大二电商\BW.DirSir.OJOApi\BW.DirSir.IRepository\bin\Debug\BW.DirSir.IRepository.pdb
+D:\大二电商\BW.DirSir.OJOApi\BW.DirSir.IRepository\bin\Debug\BW.DirSir.Model.dll
+D:\大二电商\BW.DirSir.OJOApi\BW.DirSir.IRepository\bin\Debug\BW.DirSir.Model.pdb
+D:\大二电商\BW.DirSir.OJOApi\BW.DirSir.IRepository\obj\Debug\BW.DirSir.IRepository.csprojAssemblyReference.cache
+D:\大二电商\BW.DirSir.OJOApi\BW.DirSir.IRepository\obj\Debug\BW.DirSir.IRepository.csproj.CoreCompileInputs.cache
+D:\大二电商\BW.DirSir.OJOApi\BW.DirSir.IRepository\obj\Debug\BW.DirSir.IRepository.csproj.CopyComplete
+D:\大二电商\BW.DirSir.OJOApi\BW.DirSir.IRepository\obj\Debug\BW.DirSir.IRepository.dll
+D:\大二电商\BW.DirSir.OJOApi\BW.DirSir.IRepository\obj\Debug\BW.DirSir.IRepository.pdb

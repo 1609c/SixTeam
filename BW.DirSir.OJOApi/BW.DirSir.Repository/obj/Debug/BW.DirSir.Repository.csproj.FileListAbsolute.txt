@@ -1,0 +1,13 @@
+D:\大二电商\BW.DirSir.OJOApi\BW.DirSir.Repository\bin\Debug\BW.DirSir.Repository.dll
+D:\大二电商\BW.DirSir.OJOApi\BW.DirSir.Repository\bin\Debug\BW.DirSir.Repository.pdb
+D:\大二电商\BW.DirSir.OJOApi\BW.DirSir.Repository\bin\Debug\BW.DirSir.IRepository.dll
+D:\大二电商\BW.DirSir.OJOApi\BW.DirSir.Repository\bin\Debug\BW.DirSir.Model.dll
+D:\大二电商\BW.DirSir.OJOApi\BW.DirSir.Repository\bin\Debug\Dapper.dll
+D:\大二电商\BW.DirSir.OJOApi\BW.DirSir.Repository\bin\Debug\BW.DirSir.IRepository.pdb
+D:\大二电商\BW.DirSir.OJOApi\BW.DirSir.Repository\bin\Debug\BW.DirSir.Model.pdb
+D:\大二电商\BW.DirSir.OJOApi\BW.DirSir.Repository\bin\Debug\Dapper.xml
+D:\大二电商\BW.DirSir.OJOApi\BW.DirSir.Repository\obj\Debug\BW.DirSir.Repository.csprojAssemblyReference.cache
+D:\大二电商\BW.DirSir.OJOApi\BW.DirSir.Repository\obj\Debug\BW.DirSir.Repository.csproj.CoreCompileInputs.cache
+D:\大二电商\BW.DirSir.OJOApi\BW.DirSir.Repository\obj\Debug\BW.DirSir.Repository.csproj.CopyComplete
+D:\大二电商\BW.DirSir.OJOApi\BW.DirSir.Repository\obj\Debug\BW.DirSir.Repository.dll
+D:\大二电商\BW.DirSir.OJOApi\BW.DirSir.Repository\obj\Debug\BW.DirSir.Repository.pdb

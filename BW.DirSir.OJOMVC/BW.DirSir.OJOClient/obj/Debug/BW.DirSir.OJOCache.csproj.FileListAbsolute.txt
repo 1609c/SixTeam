@@ -1,0 +1,6 @@
+D:\大二电商\BW.DirSir.OJOMVC\BW.DirSir.OJOClient\bin\Debug\BW.DirSir.OJOClient.dll
+D:\大二电商\BW.DirSir.OJOMVC\BW.DirSir.OJOClient\bin\Debug\BW.DirSir.OJOClient.pdb
+D:\大二电商\BW.DirSir.OJOMVC\BW.DirSir.OJOClient\obj\Debug\BW.DirSir.OJOCache.csproj.CoreCompileInputs.cache
+D:\大二电商\BW.DirSir.OJOMVC\BW.DirSir.OJOClient\obj\Debug\BW.DirSir.OJOClient.dll
+D:\大二电商\BW.DirSir.OJOMVC\BW.DirSir.OJOClient\obj\Debug\BW.DirSir.OJOClient.pdb
+D:\大二电商\BW.DirSir.OJOMVC\BW.DirSir.OJOClient\obj\Debug\BW.DirSir.OJOCache.csprojAssemblyReference.cache

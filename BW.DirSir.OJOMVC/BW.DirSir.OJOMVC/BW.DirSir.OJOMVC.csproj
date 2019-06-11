@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8AB66F84-CBBA-434A-B031-54F7FBCBA7D1}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BW.DirSir.OJOMVC</RootNamespace>
+    <AssemblyName>BW.DirSir.OJOMVC</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Abstractions, Version=4.1.3.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Abstractions.4.1.3\lib\net46\Unity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Container, Version=5.10.3.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Container.5.10.3\lib\net46\Unity.Container.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mvc, Version=5.10.1.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Mvc.5.10.1\lib\net46\Unity.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.2.0\lib\net40\WebActivatorEx.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\UnityConfig.cs" />
+    <Compile Include="App_Start\UnityMvcActivator.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OJOController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="HttpClientHelper.cs" />
+    <Compile Include="Models\Class.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Pattern\眼镜\OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！.html" />
+    <Content Include="Pattern\眼镜\css\1010_thumb_G_1533255373200.jpg" />
+    <Content Include="Pattern\眼镜\css\1026_thumb_G_1533269482788.jpg" />
+    <Content Include="Pattern\眼镜\css\1086_thumb_G_1533340329185.jpg" />
+    <Content Include="Pattern\眼镜\css\1125_thumb_G_1533436297150.jpg" />
+    <Content Include="Pattern\眼镜\css\1154_thumb_G_1534757914812.jpg" />
+    <Content Include="Pattern\眼镜\css\1158_thumb_G_1533443315414.jpg" />
+    <Content Include="Pattern\眼镜\css\1162_thumb_G_1533447719994.jpg" />
+    <Content Include="Pattern\眼镜\css\1172_thumb_G_1533493974857.jpg" />
+    <Content Include="Pattern\眼镜\css\1212_thumb_G_1533583980235.jpg" />
+    <Content Include="Pattern\眼镜\css\1254_thumb_G_1533630396406.jpg" />
+    <Content Include="Pattern\眼镜\css\1438_thumb_G_1536111902783.jpg" />
+    <Content Include="Pattern\眼镜\css\1444_thumb_G_1536120655555.jpg" />
+    <Content Include="Pattern\眼镜\css\1450_thumb_G_1536121514963.jpg" />
+    <Content Include="Pattern\眼镜\css\1478_thumb_G_1536124767139.jpg" />
+    <Content Include="Pattern\眼镜\css\1499_thumb_G_1542928302200.jpg" />
+    <Content Include="Pattern\眼镜\css\1512673722121005267.jpg" />
+    <Content Include="Pattern\眼镜\css\1513825579837890623.jpg" />
+    <Content Include="Pattern\眼镜\css\1513826036533801900.jpg" />
+    <Content Include="Pattern\眼镜\css\1513826267413058603.jpg" />
+    <Content Include="Pattern\眼镜\css\1513835265245850530.jpg" />
+    <Content Include="Pattern\眼镜\css\1513835635226128911.jpg" />
+    <Content Include="Pattern\眼镜\css\1517990412137994443.jpg" />
+    <Content Include="Pattern\眼镜\css\1534490440751617179.png" />
+    <Content Include="Pattern\眼镜\css\1534498125094324926.jpg" />
+    <Content Include="Pattern\眼镜\css\1534711869465227863.jpg" />
+    <Content Include="Pattern\眼镜\css\1534712412942813937.jpg" />
+    <Content Include="Pattern\眼镜\css\1534718497885975980.jpg" />
+    <Content Include="Pattern\眼镜\css\1534718533143242878.jpg" />
+    <Content Include="Pattern\眼镜\css\1534718549735008187.jpg" />
+    <Content Include="Pattern\眼镜\css\1534718565631599410.jpg" />
+    <Content Include="Pattern\眼镜\css\1534718583032779057.jpg" />
+    <Content Include="Pattern\眼镜\css\1534718660611582569.jpg" />
+    <Content Include="Pattern\眼镜\css\1534722560053485224.jpg" />
+    <Content Include="Pattern\眼镜\css\1534722591054641839.jpg" />
+    <Content Include="Pattern\眼镜\css\1534722632356296861.jpg" />
+    <Content Include="Pattern\眼镜\css\1534723568087621870.jpg" />
+    <Content Include="Pattern\眼镜\css\1534723590845698674.jpg" />
+    <Content Include="Pattern\眼镜\css\1534723610251240185.jpg" />
+    <Content Include="Pattern\眼镜\css\1534723629923579136.jpg" />
+    <Content Include="Pattern\眼镜\css\1534723648564382850.jpg" />
+    <Content Include="Pattern\眼镜\css\1534723669922256952.jpg" />
+    <Content Include="Pattern\眼镜\css\1534724683628662512.jpg" />
+    <Content Include="Pattern\眼镜\css\1534724704610446152.jpg" />
+    <Content Include="Pattern\眼镜\css\1534724721005138068.jpg" />
+    <Content Include="Pattern\眼镜\css\1534724738074885117.jpg" />
+    <Content Include="Pattern\眼镜\css\1534724756837667355.jpg" />
+    <Content Include="Pattern\眼镜\css\1534724771500288009.jpg" />
+    <Content Include="Pattern\眼镜\css\1534807238801670054.jpg" />
+    <Content Include="Pattern\眼镜\css\1543536428264582479.jpg" />
+    <Content Include="Pattern\眼镜\css\1543536501685035271.jpg" />
+    <Content Include="Pattern\眼镜\css\1543537156379976332.jpg" />
+    <Content Include="Pattern\眼镜\css\1543537208213215291.jpg" />
+    <Content Include="Pattern\眼镜\css\1543537238738201763.jpg" />
+    <Content Include="Pattern\眼镜\css\20180928163821_63965.jpg" />
+    <Content Include="Pattern\眼镜\css\20180928163904_22655.jpg" />
+    <Content Include="Pattern\眼镜\css\20180928164040_55151.jpg" />
+    <Content Include="Pattern\眼镜\css\20180928164141_28658.jpg" />
+    <Content Include="Pattern\眼镜\css\20180928164222_32486.jpg" />
+    <Content Include="Pattern\眼镜\css\20180928164414_46290.jpg" />
+    <Content Include="Pattern\眼镜\css\20180928164457_23001.jpg" />
+    <Content Include="Pattern\眼镜\css\20180928164534_28276.jpg" />
+    <Content Include="Pattern\眼镜\css\20180928164702_48361.jpg" />
+    <Content Include="Pattern\眼镜\css\44_thumb_G_1529530339837.jpg" />
+    <Content Include="Pattern\眼镜\css\45_thumb_G_1529530328375.jpg" />
+    <Content Include="Pattern\眼镜\css\46_thumb_G_1529530317084.jpg" />
+    <Content Include="Pattern\眼镜\css\47_thumb_G_1529529723372.jpg" />
+    <Content Include="Pattern\眼镜\css\859_thumb_G_1533010306464.jpg" />
+    <Content Include="Pattern\眼镜\css\871_thumb_G_1533017406951.jpg" />
+    <Content Include="Pattern\眼镜\css\884_thumb_G_1533181068541.jpg" />
+    <Content Include="Pattern\眼镜\css\890_thumb_G_1533181955642.jpg" />
+    <Content Include="Pattern\眼镜\css\back_to_top.min.js" />
+    <Content Include="Pattern\眼镜\css\blank.gif" />
+    <Content Include="Pattern\眼镜\css\captcha.php" />
+    <Content Include="Pattern\眼镜\css\clickbtn_15.png" />
+    <Content Include="Pattern\眼镜\css\closebtn_9.png" />
+    <Content Include="Pattern\眼镜\css\common.js" />
+    <Content Include="Pattern\眼镜\css\commonbg_11.png" />
+    <Content Include="Pattern\眼镜\css\cron.php" />
+    <Content Include="Pattern\眼镜\css\guarantee.png" />
+    <Content Include="Pattern\眼镜\css\hot.gif" />
+    <Content Include="Pattern\眼镜\css\index.css" />
+    <Content Include="Pattern\眼镜\css\index.js" />
+    <Content Include="Pattern\眼镜\css\index_min.js" />
+    <Content Include="Pattern\眼镜\css\jq.js" />
+    <Content Include="Pattern\眼镜\css\jquery-1.4.2.flp.js" />
+    <Content Include="Pattern\眼镜\css\kf_ivt_new.php" />
+    <Content Include="Pattern\眼镜\css\mll_common.min.css" />
+    <Content Include="Pattern\眼镜\css\mobile_53kf_1522048939.png" />
+    <Content Include="Pattern\眼镜\css\new4.gif" />
+    <Content Include="Pattern\眼镜\css\otherimg_11.png" />
+    <Content Include="Pattern\眼镜\css\page.js" />
+    <Content Include="Pattern\眼镜\css\page_footer.js" />
+    <Content Include="Pattern\眼镜\css\page_header.js" />
+    <Content Include="Pattern\眼镜\css\people.gif" />
+    <Content Include="Pattern\眼镜\css\Sales_time.js" />
+    <Content Include="Pattern\眼镜\css\saved_resource%281%29.html" />
+    <Content Include="Pattern\眼镜\css\saved_resource.html" />
+    <Content Include="Pattern\眼镜\css\user.js" />
+    <Content Include="Pattern\眼镜\css\utils.js" />
+    <Content Include="Pattern\眼镜\css\weixin.jpg" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="AppSettings.config" />
+    <Content Include="NlogSetting.config" />
+    <Content Include="Pattern\眼镜\css\1" />
+    <Content Include="Pattern\眼镜\css\sendacc.jsp" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\OJO\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Views\OJOIndex\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>65175</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:65175/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
