@@ -1,0 +1,1273 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- base href="http://www.o-j-o.cn/" -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+
+    <title>购物车</title>
+
+    <link rel="shortcut icon" href="http://www.o-j-o.cn/favicon.ico">
+    <link href="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/mll_common.css" rel="stylesheet" />
+    <link href="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/style.css" rel="stylesheet" type="text/css">
+    <link href="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/flow.css" rel="stylesheet" type="text/css">
+    <link href="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/easydialog.css" rel="stylesheet" type="text/css">
+    <link href="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/flows.css" rel="stylesheet" type="text/css">
+    <link href="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/flowss.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/transport_jquery.js"></script>
+    <script type="text/javascript" src="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/common.js"></script>
+    <script type="text/javascript" src="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/user.js"></script>
+    <script type="text/javascript" src="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/utils.js"></script>
+    <script type="text/javascript" src="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/jquery.js"></script>
+    <script type="text/javascript" src="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/jquery_002.js"></script>
+    <script type="text/javascript" src="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/myAlertDiv.js"></script>
+    <script type="text/javascript" src="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/shopping_flow.js"></script>
+    <script src="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/easydialog.js"></script>
+    <script src="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/ojologin.js"></script>
+    <script>
+        function ojologin() {
+            easyDialog.open({
+                container: {
+                    header: 'OJO会员登录',
+                    content: '<form id="ECS_LOGINFORM" name="ECS_LOGINFORM" method="post" action="javascript:signIn2()" ><div style="padding:30px; margin:0 0 0 -110px;"><p style=" font-size:14px;  padding:0 0 20px 0; margin:-20px 0 0 120px">用户名：<input type = "text" name="username" style="width:190px; height:20px; line-height:20px; font-sieze:12px; border:1px #999 solid; font-family:"微软雅黑" color:"#333"" /></P> <p style=" font-size:14px;  padding:0 0 10px 66px; margin:0 0 0 54px">密　码：<input type="password" name="password" style="width:190px; height:20px; line-height:20px; font-sieze:12px; border:1px #999 solid;" />  <span><a href="/user.php?act=get_password" style="color:#666;" target="_blank" >忘记密码？</a></span></P><p style=" margin:10px 0 0 185px; position:relative; "><input type="submit" value="" onclick=""; style=" width:82px; height:31px; background:url(http://www.o-j-o.cn/themes/ojo/images/buttonlogin.png) no-repeat  ; border:none; cursor: pointer; " />  <span style="position:absolute; top:10px; left:100px;"   ><a href="/user.php?act=register" style="color:#c60;">新用户注册</a></span></P><p style="border-top:1px #ccc solid; margin:10px 0 0 100px; "></p><p style=" font-size:12px;  padding:0 0 20px 0; margin:10px 0 0 0; color:#666; margin:0 0 0 120px">使用合作网站帐户登录OJO眼镜商城：</P><p style=" font-size:12px; margin:-10px 0 0 220px;   color:#666;"><a href="/user.php?act=oath&type=qq"><img src="/themes/ojo/images/qq_login.gif" style="border:none;"></a> <a href="/user.php?act=oath&type=weibo"><img src="/themes/ojo/images/sina_login_logo.gif" style="border:none;"></a> <a href="/user.php?act=oath&type=alipay"><img src="/themes/ojo/images/alipay_login.png" style="border:none;"></a> </p></div><form>'
+                },
+                fixed: true,
+                drag: true
+            });
+        };
+        function signIn2() {
+            var frm = document.forms['ECS_LOGINFORM'];
+
+            if (frm) {
+                var username = frm.elements['username'].value;
+                var password = frm.elements['password'].value;
+                var captcha = '';
+                if (frm.elements['captcha']) {
+                    captcha = frm.elements['captcha'].value;
+                }
+
+                if (username.length == 0 || password.length == 0) {
+
+                    alert("对不起，您必须完整填写用户名和密码。");
+
+                    return;
+                }
+                else {
+                    Ajax.call('/user.php?act=signin2', 'username=' + username + '&password=' + encodeURIComponent(password) + '&captcha=' + captcha, signinResponse2, "POST", "TEXT");
+                }
+            }
+            else {
+                alert('Template error!');
+            }
+        }
+
+        function signinResponse2(result) {
+
+            var res = $.evalJSON(result);
+
+            if (res.error > 0) {
+                alert(res.content);
+            }
+            else {
+                location.href = "/flow.php?step=checkout";
+            }
+
+        }
+
+
+
+    </script>
+</head>
+<body style="margin:33px 0 0 0;">
+
+    <div style=" width:100%; position:absolute; left:0; top:0;background:#eee repeat-x center -3px; z-index:280; height:30px; line-height:30px; ">
+        <div class="wrapper">
+            <div class="top-bar">
+                <div class="container">
+                    <ul class="top-member">
+
+                        <li class="wellcome"> <span>Hello，Welcome To OJO眼镜 ！</span> </li>
+                        <li class="top-login "> <a href="http://www.o-j-o.cn/user.php?act=login">登录</a><s></s> </li>
+                        <li class="top-regiter"> <a href="http://www.o-j-o.cn/user.php?act=register">注册</a> </li>
+                    </ul>
+                    <ul class="top-panel">
+                        <li> <a href="javascript:;" style="margin-right:18px" class="goshop1">购物车<span style="color:red; font-weight:bold; padding-left:5px;" id="cartInfo_number">0</span></a> </li>
+                        <li> <a href="http://www.o-j-o.cn/flow.php" target="_blank" style="margin-right:18px" class="goshop2" rel="nofollow"></a><s style=" margin-right:8px;"></s> </li>
+                        <li class="quick-area" style="position:relative;"> <span class="mobile"><a href="http://www.o-j-o.cn/mobile" rel="nofollow" target="_blank">手机版</a></span><i class="qrcode-tb" style="display:none;"></i><s></s> </li>
+                        <li> <a href="http://www.o-j-o.cn/ojoarc-5/12.html" target="_blank" style="margin-right:7px" rel="nofollow">帮助中心</a><s></s> </li>
+                        <li class="li-sitemap menu-item">
+                            <h3 class="menu-hd"><i class="iconfont2"></i><span>最新消息</span><b></b></h3>
+                            <div class="menu-bd">
+                                <div class="site-cate site-hot">
+                                    <h2>热点关注<span>Hot</span></h2>
+                                    <ul class="hot_img">
+                                        <table cellspacing="0" cellpadding="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+
+                                                        <a href="http://www.o-j-o.cn/" target="_blank"><img src="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/1517990412137994443.jpg" alt="" width="300" height="175" border="0"></a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </ul>
+                                </div>
+                                <div class="site-cate site-hot" style="padding-left:30px; width:250px;">
+                                    <h2>配镜指南<span>Guide</span></h2>
+                                    <ul>
+                                        <li><a href="http://www.o-j-o.cn/ojoarc-pjfx/1117.html" title="防蓝光眼镜，真的可以阻碍蓝光吗？" target="_blank">防蓝光眼镜，真的可以阻碍蓝光吗？</a></li>
+                                        <li><a href="http://www.o-j-o.cn/ojoarc-pjfx/1115.html" title="无框眼镜适合什么镜片？" target="_blank">无框眼镜适合什么镜片？</a></li>
+                                        <li><a href="http://www.o-j-o.cn/ojoarc-pjfx/1111.html" title="验光，应该是去医院还是去眼镜店？" target="_blank">验光，应该是去医院还是去眼镜店？</a></li>
+                                        <li><a href="http://www.o-j-o.cn/ojoarc-pjfx/1107.html" title="网上配镜，怎么确定镜框是否适合自己？" target="_blank">网上配镜，怎么确定镜框是否适合自己？</a></li>
+                                        <li><a href="http://www.o-j-o.cn/ojoarc-pjfx/1106.html" title="大圆脸应该戴什么形状的眼镜？" target="_blank">大圆脸应该戴什么形状的眼镜？</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="width:980px; margin:0px auto">
+        <div class="w">
+
+
+            <script type="text/javascript" src="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/showdiv.js"></script>
+            <script type="text/javascript">
+      var user_name_empty = "请输入您的用户名！";
+      var email_address_empty = "请输入您的电子邮件地址！";
+      var email_address_error = "您输入的电子邮件地址格式不正确！";
+      var mobile_address_empty = "请输入您的手机号！";
+      var mobile_address_error = "您输入的手机号格式不正确！";
+      var new_password_empty = "请输入您的新密码！";
+      var confirm_password_empty = "请输入您的确认密码！";
+      var both_password_error = "您两次输入的密码不一致！";
+      var show_div_text = "请点击更新购物车按钮";
+      var show_div_exit = "关闭";
+            </script>
+            <div class="w fl_header clearfix">
+                <a class="Left" href="http://www.o-j-o.cn/"><img class="fl_logo" src="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/blank.gif"></a>
+                <div class="Right fl_step fl_step_cart"></div>
+            </div>
+            <div class="flow_h2 w mt20 clearfix">
+                <div class="Left text">我的购物车</div>
+            </div>
+            <table class="w mt20 cart_table" id="JS_list_table_cb">
+                <tbody>
+                    <tr>
+                        <th class="first">选择</th>
+                        <th colspan="2">商品</th>
+                        <th style="width:16%">属性</th>
+                        <th style="width:8%">单价</th>
+                        <th style="width:15%">数量</th>
+                        <th style="width:8%">金额</th>
+                        <th style="width:10%">操作</th>
+                    </tr>
+                    <form id="formCart" name="formCart" method="post" action="/flow.php"></form>
+                    <tr>
+                        <td colspan="8" style=" font-weight:bold" height="50px" bgcolor="#ffffff" align="center">您的购物车中没有任何商品!</td>
+                    </tr>
+                    <input type="hidden" name="step" value="update_cart">
+
+                </tbody>
+            </table>
+
+            <table class="cart_ygd" id="ygd_input" width="500" border="1">
+                <tbody>
+                    <tr>
+                        <td colspan="5" class="head"><b></b><a href="#">如何填写验光单？</a></td>
+                    </tr>
+                    <tr>
+                        <td width="72">&nbsp;</td>
+                        <td width="107">度数(Sph)</td>
+                        <td width="107">瞳距(PD)</td>
+                        <td width="107">散光(Cyl)</td>
+                        <td width="107">轴位(Axis)</td>
+                    </tr>
+                    <tr>
+                        <td> 右眼R</td>
+                        <td>
+                            <select name="right_ds" id="right_sphere_id" title="右眼度数" defaultvalue="0.00" onfocus="setTempValue(this)" onchange="fittingsCheck()">
+                                <option value="" selected="selected">请选择</option>
+                                <option label="0.00" value="38463">0.00 </option>
+                                <option label="-0.50" value="38464">-0.50 </option>
+                                <option label="-0.75" value="38465">-0.75 </option>
+                                <option label="-1.00" value="38466">-1.00 </option>
+                                <option label="-1.25" value="38467">-1.25 </option>
+                                <option label="-1.50" value="38468">-1.50 </option>
+                                <option label="-1.75" value="38469">-1.75 </option>
+                                <option label="-2.00" value="38470">-2.00 </option>
+                                <option label="-2.25" value="38471">-2.25 </option>
+                                <option label="-2.50" value="38472">-2.50 </option>
+                                <option label="-2.75" value="38473">-2.75 </option>
+                                <option label="-3.00" value="38474">-3.00 </option>
+                                <option label="-3.25" value="38475">-3.25 </option>
+                                <option label="-3.50" value="38476">-3.50 </option>
+                                <option label="-3.75" value="38477">-3.75 </option>
+                                <option label="-4.00" value="38478">-4.00 </option>
+                                <option label="-4.25" value="38479">-4.25 </option>
+                                <option label="-4.50" value="38480">-4.50 </option>
+                                <option label="-4.75" value="38481">-4.75 </option>
+                                <option label="-5.00" value="38482">-5.00 </option>
+                                <option label="-5.25" value="38483">-5.25 </option>
+                                <option label="-5.50" value="38484">-5.50 </option>
+                                <option label="-5.75" value="38485">-5.75 </option>
+                                <option label="-6.00" value="38486">-6.00 </option>
+                                <option label="-6.25" value="38487">-6.25 </option>
+                                <option label="-6.50" value="38488">-6.50 </option>
+                                <option label="-6.75" value="38489">-6.75 </option>
+                                <option label="-7.00" value="38490">-7.00 </option>
+                                <option label="-7.25" value="38491">-7.25 </option>
+                                <option label="-7.50" value="38492">-7.50 </option>
+                                <option label="-7.75" value="38493">-7.75 </option>
+                                <option label="-8.00" value="38494">-8.00 </option>
+                                <option label="-8.25" value="38495">-8.25 </option>
+                                <option label="-8.50" value="38496">-8.50 </option>
+                                <option label="-8.75" value="38497">-8.75 </option>
+                                <option label="-9.00" value="38498">-9.00 </option>
+                                <option label="-9.25" value="38499">-9.25 </option>
+                                <option label="-9.50" value="38500">-9.50 </option>
+                                <option label="-9.75" value="38501">-9.75 </option>
+                                <option label="-10.00" value="38502">-10.00 </option>
+                                <option label="-10.25" value="38503">-10.25 </option>
+                                <option label="-10.50" value="38504">-10.50 </option>
+                                <option label="-10.75" value="38505">-10.75 </option>
+                                <option label="-11.00" value="38506">-11.00 </option>
+                                <option label="-11.50" value="38507">-11.50 </option>
+                                <option label="-12.00" value="38508">-12.00 </option>
+                                <option label="-12.50" value="38509">-12.50 </option>
+                                <option label="-13.00" value="38510">-13.00 </option>
+                                <option label="-13.50" value="38511">-13.50 </option>
+                                <option label="-14.00" value="38512">-14.00 </option>
+                                <option label="-14.50" value="38513">-14.50 </option>
+                                <option label="-15.00" value="38514">-15.00 </option>
+                                <option label="-15.50" value="38515">-15.50 </option>
+                                <option label="-16.00" value="38516">-16.00 </option>
+                            </select>
+                        </td>
+                        <td>
+                            <select id="pd_id" name="tongju" title="瞳距" defaultvalue="0">
+                                <option value="" selected="selected">请选择</option>
+                                <option label="52" value="38517">52 </option>
+                                <option label="52.5" value="38518">52.5 </option>
+                                <option label="53" value="38519">53 </option>
+                                <option label="53.5" value="38520">53.5 </option>
+                                <option label="54" value="38521">54 </option>
+                                <option label="54.5" value="38522">54.5 </option>
+                                <option label="55" value="38523">55 </option>
+                                <option label="55.5" value="38524">55.5 </option>
+                                <option label="56" value="38525">56 </option>
+                                <option label="56.5" value="38526">56.5 </option>
+                                <option label="57" value="38527">57 </option>
+                                <option label="57.5" value="38528">57.5 </option>
+                                <option label="58" value="38529">58 </option>
+                                <option label="58.5" value="38530">58.5 </option>
+                                <option label="59" value="38531">59 </option>
+                                <option label="59.5" value="38532">59.5 </option>
+                                <option label="60" value="38533">60 </option>
+                                <option label="60.5" value="38534">60.5 </option>
+                                <option label="61" value="38535">61 </option>
+                                <option label="61.5" value="38536">61.5 </option>
+                                <option label="62" value="38537">62 </option>
+                                <option label="62.5" value="38538">62.5 </option>
+                                <option label="63" value="38539">63 </option>
+                                <option label="63.5" value="38540">63.5 </option>
+                                <option label="64" value="38541">64 </option>
+                                <option label="64.5" value="38542">64.5 </option>
+                                <option label="65" value="38543">65 </option>
+                                <option label="65.5" value="38544">65.5 </option>
+                                <option label="66" value="38545">66 </option>
+                                <option label="66.5" value="38546">66.5 </option>
+                                <option label="67" value="38547">67 </option>
+                                <option label="67.5" value="38548">67.5 </option>
+                                <option label="68" value="38549">68 </option>
+                                <option label="68.5" value="38550">68.5 </option>
+                                <option label="69" value="38551">69 </option>
+                                <option label="69.5" value="38552">69.5 </option>
+                                <option label="70" value="38553">70 </option>
+                                <option label="70.5" value="38554">70.5 </option>
+                                <option label="71" value="38555">71 </option>
+                                <option label="71.5" value="38556">71.5 </option>
+                                <option label="72" value="38557">72 </option>
+                                <option label="72.5" value="38558">72.5 </option>
+                                <option label="73" value="38559">73 </option>
+                                <option label="73.5" value="38560">73.5 </option>
+                                <option label="74" value="38561">74 </option>
+                                <option label="74.5" value="38562">74.5 </option>
+                                <option label="75" value="38563">75 </option>
+                                <option label="75.5" value="38564">75.5 </option>
+                                <option label="76" value="38565">76 </option>
+                            </select>
+                        </td>
+                        <td>
+                            <select id="right_cylinder_id" name="right_sg" title="右眼散光" defaultvalue="0.00" onchange="onlockAxis(this,'right_axis_id');fittingsCheck()" onfocus="setTempValue(this)">
+                                <option value="" selected="selected">请选择</option>
+                                <option label="-0.25" value="38586">-0.25 </option>
+                                <option label="-0.50" value="38587">-0.50 </option>
+                                <option label="-0.75" value="38588">-0.75 </option>
+                                <option label="-1.00" value="38589">-1.00 </option>
+                                <option label="-1.25" value="38590">-1.25 </option>
+                                <option label="-1.50" value="38591">-1.50 </option>
+                                <option label="-1.75" value="38592">-1.75 </option>
+                                <option label="-2.00" value="38593">-2.00 </option>
+                                <option label="-2.25" value="38594">-2.25 </option>
+                                <option label="-2.50" value="38595">-2.50 </option>
+                                <option label="-2.75" value="38596">-2.75 </option>
+                                <option label="-3.00" value="38597">-3.00 </option>
+                                <option label="-3.25" value="38598">-3.25 </option>
+                                <option label="-3.50" value="38599">-3.50 </option>
+                                <option label="-3.75" value="38600">-3.75 </option>
+                                <option label="-4.00" value="38601">-4.00 </option>
+                                <option label="-4.25" value="38602">-4.25 </option>
+                                <option label="-4.50" value="38603">-4.50 </option>
+                                <option label="-4.75" value="38604">-4.75 </option>
+                                <option label="-5.00" value="38605">-5.00 </option>
+                            </select>
+                        </td>
+                        <td>
+                            <select id="right_axis_id" name="right_zw" title="右眼散光轴位" class="" defaultvalue="0.00" disabled="disabled">
+                                <option value="" selected="selected">请选择</option>
+                                <option label="1" value="38786">1 </option>
+                                <option label="2" value="38787">2 </option>
+                                <option label="3" value="38788">3 </option>
+                                <option label="4" value="38789">4 </option>
+                                <option label="5" value="38790">5 </option>
+                                <option label="6" value="38791">6 </option>
+                                <option label="7" value="38792">7 </option>
+                                <option label="8" value="38793">8 </option>
+                                <option label="9" value="38794">9 </option>
+                                <option label="10" value="38795">10 </option>
+                                <option label="11" value="38796">11 </option>
+                                <option label="12" value="38797">12 </option>
+                                <option label="13" value="38798">13 </option>
+                                <option label="14" value="38799">14 </option>
+                                <option label="15" value="38800">15 </option>
+                                <option label="16" value="38801">16 </option>
+                                <option label="17" value="38802">17 </option>
+                                <option label="18" value="38803">18 </option>
+                                <option label="19" value="38804">19 </option>
+                                <option label="20" value="38805">20 </option>
+                                <option label="21" value="38806">21 </option>
+                                <option label="22" value="38807">22 </option>
+                                <option label="23" value="38808">23 </option>
+                                <option label="24" value="38809">24 </option>
+                                <option label="25" value="38810">25 </option>
+                                <option label="26" value="38811">26 </option>
+                                <option label="27" value="38812">27 </option>
+                                <option label="28" value="38813">28 </option>
+                                <option label="29" value="38814">29 </option>
+                                <option label="30" value="38815">30 </option>
+                                <option label="31" value="38816">31 </option>
+                                <option label="32" value="38817">32 </option>
+                                <option label="33" value="38818">33 </option>
+                                <option label="34" value="38819">34 </option>
+                                <option label="35" value="38820">35 </option>
+                                <option label="36" value="38821">36 </option>
+                                <option label="37" value="38822">37 </option>
+                                <option label="38" value="38823">38 </option>
+                                <option label="39" value="38824">39 </option>
+                                <option label="40" value="38825">40 </option>
+                                <option label="41" value="38826">41 </option>
+                                <option label="42" value="38827">42 </option>
+                                <option label="43" value="38828">43 </option>
+                                <option label="44" value="38829">44 </option>
+                                <option label="45" value="38830">45 </option>
+                                <option label="46" value="38831">46 </option>
+                                <option label="47" value="38832">47 </option>
+                                <option label="48" value="38833">48 </option>
+                                <option label="49" value="38834">49 </option>
+                                <option label="50" value="38835">50 </option>
+                                <option label="51" value="38836">51 </option>
+                                <option label="52" value="38837">52 </option>
+                                <option label="53" value="38838">53 </option>
+                                <option label="54" value="38839">54 </option>
+                                <option label="55" value="38840">55 </option>
+                                <option label="56" value="38841">56 </option>
+                                <option label="57" value="38842">57 </option>
+                                <option label="58" value="38843">58 </option>
+                                <option label="59" value="38844">59 </option>
+                                <option label="60" value="38845">60 </option>
+                                <option label="61" value="38846">61 </option>
+                                <option label="62" value="38847">62 </option>
+                                <option label="63" value="38848">63 </option>
+                                <option label="64" value="38849">64 </option>
+                                <option label="65" value="38850">65 </option>
+                                <option label="66" value="38851">66 </option>
+                                <option label="67" value="38852">67 </option>
+                                <option label="68" value="38853">68 </option>
+                                <option label="69" value="38854">69 </option>
+                                <option label="70" value="38855">70 </option>
+                                <option label="71" value="38856">71 </option>
+                                <option label="72" value="38857">72 </option>
+                                <option label="73" value="38858">73 </option>
+                                <option label="74" value="38859">74 </option>
+                                <option label="75" value="38860">75 </option>
+                                <option label="76" value="38861">76 </option>
+                                <option label="77" value="38862">77 </option>
+                                <option label="78" value="38863">78 </option>
+                                <option label="79" value="38864">79 </option>
+                                <option label="80" value="38865">80 </option>
+                                <option label="81" value="38866">81 </option>
+                                <option label="82" value="38867">82 </option>
+                                <option label="83" value="38868">83 </option>
+                                <option label="84" value="38869">84 </option>
+                                <option label="85" value="38870">85 </option>
+                                <option label="86" value="38871">86 </option>
+                                <option label="87" value="38872">87 </option>
+                                <option label="88" value="38873">88 </option>
+                                <option label="89" value="38874">89 </option>
+                                <option label="90" value="38875">90 </option>
+                                <option label="91" value="38876">91 </option>
+                                <option label="92" value="38877">92 </option>
+                                <option label="93" value="38878">93 </option>
+                                <option label="94" value="38879">94 </option>
+                                <option label="95" value="38880">95 </option>
+                                <option label="96" value="38881">96 </option>
+                                <option label="97" value="38882">97 </option>
+                                <option label="98" value="38883">98 </option>
+                                <option label="99" value="38884">99 </option>
+                                <option label="100" value="38885">100 </option>
+                                <option label="101" value="38886">101 </option>
+                                <option label="102" value="38887">102 </option>
+                                <option label="103" value="38888">103 </option>
+                                <option label="104" value="38889">104 </option>
+                                <option label="105" value="38890">105 </option>
+                                <option label="106" value="38891">106 </option>
+                                <option label="107" value="38892">107 </option>
+                                <option label="108" value="38893">108 </option>
+                                <option label="109" value="38894">109 </option>
+                                <option label="110" value="38895">110 </option>
+                                <option label="111" value="38896">111 </option>
+                                <option label="112" value="38897">112 </option>
+                                <option label="113" value="38898">113 </option>
+                                <option label="114" value="38899">114 </option>
+                                <option label="115" value="38900">115 </option>
+                                <option label="116" value="38901">116 </option>
+                                <option label="117" value="38902">117 </option>
+                                <option label="118" value="38903">118 </option>
+                                <option label="119" value="38904">119 </option>
+                                <option label="120" value="38905">120 </option>
+                                <option label="121" value="38906">121 </option>
+                                <option label="122" value="38907">122 </option>
+                                <option label="123" value="38908">123 </option>
+                                <option label="124" value="38909">124 </option>
+                                <option label="125" value="38910">125 </option>
+                                <option label="126" value="38911">126 </option>
+                                <option label="127" value="38912">127 </option>
+                                <option label="128" value="38913">128 </option>
+                                <option label="129" value="38914">129 </option>
+                                <option label="130" value="38915">130 </option>
+                                <option label="131" value="38916">131 </option>
+                                <option label="132" value="38917">132 </option>
+                                <option label="133" value="38918">133 </option>
+                                <option label="134" value="38919">134 </option>
+                                <option label="135" value="38920">135 </option>
+                                <option label="136" value="38921">136 </option>
+                                <option label="137" value="38922">137 </option>
+                                <option label="138" value="38923">138 </option>
+                                <option label="139" value="38924">139 </option>
+                                <option label="140" value="38925">140 </option>
+                                <option label="141" value="38926">141 </option>
+                                <option label="142" value="38927">142 </option>
+                                <option label="143" value="38928">143 </option>
+                                <option label="144" value="38929">144 </option>
+                                <option label="145" value="38930">145 </option>
+                                <option label="146" value="38931">146 </option>
+                                <option label="147" value="38932">147 </option>
+                                <option label="148" value="38933">148 </option>
+                                <option label="149" value="38934">149 </option>
+                                <option label="150" value="38935">150 </option>
+                                <option label="151" value="38936">151 </option>
+                                <option label="152" value="38937">152 </option>
+                                <option label="153" value="38938">153 </option>
+                                <option label="154" value="38939">154 </option>
+                                <option label="155" value="38940">155 </option>
+                                <option label="156" value="38941">156 </option>
+                                <option label="157" value="38942">157 </option>
+                                <option label="158" value="38943">158 </option>
+                                <option label="159" value="38944">159 </option>
+                                <option label="160" value="38945">160 </option>
+                                <option label="161" value="38946">161 </option>
+                                <option label="162" value="38947">162 </option>
+                                <option label="163" value="38948">163 </option>
+                                <option label="164" value="38949">164 </option>
+                                <option label="165" value="38950">165 </option>
+                                <option label="166" value="38951">166 </option>
+                                <option label="167" value="38952">167 </option>
+                                <option label="168" value="38953">168 </option>
+                                <option label="169" value="38954">169 </option>
+                                <option label="170" value="38955">170 </option>
+                                <option label="171" value="38956">171 </option>
+                                <option label="172" value="38957">172 </option>
+                                <option label="173" value="38958">173 </option>
+                                <option label="174" value="38959">174 </option>
+                                <option label="175" value="38960">175 </option>
+                                <option label="176" value="38961">176 </option>
+                                <option label="177" value="38962">177 </option>
+                                <option label="178" value="38963">178 </option>
+                                <option label="179" value="38964">179 </option>
+                                <option label="180" value="38965">180 </option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> 左眼L</td>
+                        <td>
+                            <select name="left_ds" id="left_sphere_id" title="左眼度数" defaultvalue="0.00" onfocus="setTempValue(this)" onchange="fittingsCheck()">
+                                <option value="" selected="selected">请选择</option>
+                                <option label="0.00" value="38409">0.00 </option>
+                                <option label="-0.50" value="38410">-0.50 </option>
+                                <option label="-0.75" value="38411">-0.75 </option>
+                                <option label="-1.00" value="38412">-1.00 </option>
+                                <option label="-1.25" value="38413">-1.25 </option>
+                                <option label="-1.50" value="38414">-1.50 </option>
+                                <option label="-1.75" value="38415">-1.75 </option>
+                                <option label="-2.00" value="38416">-2.00 </option>
+                                <option label="-2.25" value="38417">-2.25 </option>
+                                <option label="-2.50" value="38418">-2.50 </option>
+                                <option label="-2.75" value="38419">-2.75 </option>
+                                <option label="-3.00" value="38420">-3.00 </option>
+                                <option label="-3.25" value="38421">-3.25 </option>
+                                <option label="-3.50" value="38422">-3.50 </option>
+                                <option label="-3.75" value="38423">-3.75 </option>
+                                <option label="-4.00" value="38424">-4.00 </option>
+                                <option label="-4.25" value="38425">-4.25 </option>
+                                <option label="-4.50" value="38426">-4.50 </option>
+                                <option label="-4.75" value="38427">-4.75 </option>
+                                <option label="-5.00" value="38428">-5.00 </option>
+                                <option label="-5.25" value="38429">-5.25 </option>
+                                <option label="-5.50" value="38430">-5.50 </option>
+                                <option label="-5.75" value="38431">-5.75 </option>
+                                <option label="-6.00" value="38432">-6.00 </option>
+                                <option label="-6.25" value="38433">-6.25 </option>
+                                <option label="-6.50" value="38434">-6.50 </option>
+                                <option label="-6.75" value="38435">-6.75 </option>
+                                <option label="-7.00" value="38436">-7.00 </option>
+                                <option label="-7.25" value="38437">-7.25 </option>
+                                <option label="-7.50" value="38438">-7.50 </option>
+                                <option label="-7.75" value="38439">-7.75 </option>
+                                <option label="-8.00" value="38440">-8.00 </option>
+                                <option label="-8.25" value="38441">-8.25 </option>
+                                <option label="-8.50" value="38442">-8.50 </option>
+                                <option label="-8.75" value="38443">-8.75 </option>
+                                <option label="-9.00" value="38444">-9.00 </option>
+                                <option label="-9.25" value="38445">-9.25 </option>
+                                <option label="-9.50" value="38446">-9.50 </option>
+                                <option label="-9.75" value="38447">-9.75 </option>
+                                <option label="-10.00" value="38448">-10.00 </option>
+                                <option label="-10.25" value="38449">-10.25 </option>
+                                <option label="-10.50" value="38450">-10.50 </option>
+                                <option label="-10.75" value="38451">-10.75 </option>
+                                <option label="-11.00" value="38452">-11.00 </option>
+                                <option label="-11.50" value="38453">-11.50 </option>
+                                <option label="-12.00" value="38454">-12.00 </option>
+                                <option label="-12.50" value="38455">-12.50 </option>
+                                <option label="-13.00" value="38456">-13.00 </option>
+                                <option label="-13.50" value="38457">-13.50 </option>
+                                <option label="-14.00" value="38458">-14.00 </option>
+                                <option label="-14.50" value="38459">-14.50 </option>
+                                <option label="-15.00" value="38460">-15.00 </option>
+                                <option label="-15.50" value="38461">-15.50 </option>
+                                <option label="-16.0" value="38462">-16.0 </option>
+                            </select>
+                        </td>
+                        <td>&nbsp;</td>
+                        <td>
+                            <select id="left_cylinder_id" name="left_sg" title="左眼散光" defaultvalue="0.00" onchange="onlockAxis(this,'left_axis_id');fittingsCheck()" onfocus="setTempValue(this)">
+                                <option value="" selected="selected">请选择</option>
+                                <option label="-0.25" value="38566">-0.25 </option>
+                                <option label="-0.50" value="38567">-0.50 </option>
+                                <option label="-0.75" value="38568">-0.75 </option>
+                                <option label="-1.00" value="38569">-1.00 </option>
+                                <option label="-1.25" value="38570">-1.25 </option>
+                                <option label="-1.50" value="38571">-1.50 </option>
+                                <option label="-1.75" value="38572">-1.75 </option>
+                                <option label="-2.00" value="38573">-2.00 </option>
+                                <option label="-2.25" value="38574">-2.25 </option>
+                                <option label="-2.50" value="38575">-2.50 </option>
+                                <option label="-2.75" value="38576">-2.75 </option>
+                                <option label="-3.00" value="38577">-3.00 </option>
+                                <option label="-3.25" value="38578">-3.25 </option>
+                                <option label="-3.50" value="38579">-3.50 </option>
+                                <option label="-3.75" value="38580">-3.75 </option>
+                                <option label="-4.00" value="38581">-4.00 </option>
+                                <option label="-4.25" value="38582">-4.25 </option>
+                                <option label="-4.50" value="38583">-4.50 </option>
+                                <option label="-4.75" value="38584">-4.75 </option>
+                                <option label="-5.00" value="38585">-5.00 </option>
+                            </select>
+                        </td>
+                        <td>
+                            <select id="left_axis_id" name="left_zw" title="左眼散光轴位" class="" defaultvalue="0.00" disabled="disabled">
+                                <option value="" selected="selected">请选择</option>
+                                <option label="1" value="38606">1 </option>
+                                <option label="2" value="38607">2 </option>
+                                <option label="3" value="38608">3 </option>
+                                <option label="4" value="38609">4 </option>
+                                <option label="5" value="38610">5 </option>
+                                <option label="6" value="38611">6 </option>
+                                <option label="7" value="38612">7 </option>
+                                <option label="8" value="38613">8 </option>
+                                <option label="9" value="38614">9 </option>
+                                <option label="10" value="38615">10 </option>
+                                <option label="11" value="38616">11 </option>
+                                <option label="12" value="38617">12 </option>
+                                <option label="13" value="38618">13 </option>
+                                <option label="14" value="38619">14 </option>
+                                <option label="15" value="38620">15 </option>
+                                <option label="16" value="38621">16 </option>
+                                <option label="17" value="38622">17 </option>
+                                <option label="18" value="38623">18 </option>
+                                <option label="19" value="38624">19 </option>
+                                <option label="20" value="38625">20 </option>
+                                <option label="21" value="38626">21 </option>
+                                <option label="22" value="38627">22 </option>
+                                <option label="23" value="38628">23 </option>
+                                <option label="24" value="38629">24 </option>
+                                <option label="25" value="38630">25 </option>
+                                <option label="26" value="38631">26 </option>
+                                <option label="27" value="38632">27 </option>
+                                <option label="28" value="38633">28 </option>
+                                <option label="29" value="38634">29 </option>
+                                <option label="30" value="38635">30 </option>
+                                <option label="31" value="38636">31 </option>
+                                <option label="32" value="38637">32 </option>
+                                <option label="33" value="38638">33 </option>
+                                <option label="34" value="38639">34 </option>
+                                <option label="35" value="38640">35 </option>
+                                <option label="36" value="38641">36 </option>
+                                <option label="37" value="38642">37 </option>
+                                <option label="38" value="38643">38 </option>
+                                <option label="39" value="38644">39 </option>
+                                <option label="40" value="38645">40 </option>
+                                <option label="41" value="38646">41 </option>
+                                <option label="42" value="38647">42 </option>
+                                <option label="43" value="38648">43 </option>
+                                <option label="44" value="38649">44 </option>
+                                <option label="45" value="38650">45 </option>
+                                <option label="46" value="38651">46 </option>
+                                <option label="47" value="38652">47 </option>
+                                <option label="48" value="38653">48 </option>
+                                <option label="49" value="38654">49 </option>
+                                <option label="50" value="38655">50 </option>
+                                <option label="51" value="38656">51 </option>
+                                <option label="52" value="38657">52 </option>
+                                <option label="53" value="38658">53 </option>
+                                <option label="54" value="38659">54 </option>
+                                <option label="55" value="38660">55 </option>
+                                <option label="56" value="38661">56 </option>
+                                <option label="57" value="38662">57 </option>
+                                <option label="58" value="38663">58 </option>
+                                <option label="59" value="38664">59 </option>
+                                <option label="60" value="38665">60 </option>
+                                <option label="61" value="38666">61 </option>
+                                <option label="62" value="38667">62 </option>
+                                <option label="63" value="38668">63 </option>
+                                <option label="64" value="38669">64 </option>
+                                <option label="65" value="38670">65 </option>
+                                <option label="66" value="38671">66 </option>
+                                <option label="67" value="38672">67 </option>
+                                <option label="68" value="38673">68 </option>
+                                <option label="69" value="38674">69 </option>
+                                <option label="70" value="38675">70 </option>
+                                <option label="71" value="38676">71 </option>
+                                <option label="72" value="38677">72 </option>
+                                <option label="73" value="38678">73 </option>
+                                <option label="74" value="38679">74 </option>
+                                <option label="75" value="38680">75 </option>
+                                <option label="76" value="38681">76 </option>
+                                <option label="77" value="38682">77 </option>
+                                <option label="78" value="38683">78 </option>
+                                <option label="79" value="38684">79 </option>
+                                <option label="80" value="38685">80 </option>
+                                <option label="81" value="38686">81 </option>
+                                <option label="82" value="38687">82 </option>
+                                <option label="83" value="38688">83 </option>
+                                <option label="84" value="38689">84 </option>
+                                <option label="85" value="38690">85 </option>
+                                <option label="86" value="38691">86 </option>
+                                <option label="87" value="38692">87 </option>
+                                <option label="88" value="38693">88 </option>
+                                <option label="89" value="38694">89 </option>
+                                <option label="90" value="38695">90 </option>
+                                <option label="91" value="38696">91 </option>
+                                <option label="92" value="38697">92 </option>
+                                <option label="93" value="38698">93 </option>
+                                <option label="94" value="38699">94 </option>
+                                <option label="95" value="38700">95 </option>
+                                <option label="96" value="38701">96 </option>
+                                <option label="97" value="38702">97 </option>
+                                <option label="98" value="38703">98 </option>
+                                <option label="99" value="38704">99 </option>
+                                <option label="100" value="38705">100 </option>
+                                <option label="101" value="38706">101 </option>
+                                <option label="102" value="38707">102 </option>
+                                <option label="103" value="38708">103 </option>
+                                <option label="104" value="38709">104 </option>
+                                <option label="105" value="38710">105 </option>
+                                <option label="106" value="38711">106 </option>
+                                <option label="107" value="38712">107 </option>
+                                <option label="108" value="38713">108 </option>
+                                <option label="109" value="38714">109 </option>
+                                <option label="110" value="38715">110 </option>
+                                <option label="111" value="38716">111 </option>
+                                <option label="112" value="38717">112 </option>
+                                <option label="113" value="38718">113 </option>
+                                <option label="114" value="38719">114 </option>
+                                <option label="115" value="38720">115 </option>
+                                <option label="116" value="38721">116 </option>
+                                <option label="117" value="38722">117 </option>
+                                <option label="118" value="38723">118 </option>
+                                <option label="119" value="38724">119 </option>
+                                <option label="120" value="38725">120 </option>
+                                <option label="121" value="38726">121 </option>
+                                <option label="122" value="38727">122 </option>
+                                <option label="123" value="38728">123 </option>
+                                <option label="124" value="38729">124 </option>
+                                <option label="125" value="38730">125 </option>
+                                <option label="126" value="38731">126 </option>
+                                <option label="127" value="38732">127 </option>
+                                <option label="128" value="38733">128 </option>
+                                <option label="129" value="38734">129 </option>
+                                <option label="130" value="38735">130 </option>
+                                <option label="131" value="38736">131 </option>
+                                <option label="132" value="38737">132 </option>
+                                <option label="133" value="38738">133 </option>
+                                <option label="134" value="38739">134 </option>
+                                <option label="135" value="38740">135 </option>
+                                <option label="136" value="38741">136 </option>
+                                <option label="137" value="38742">137 </option>
+                                <option label="138" value="38743">138 </option>
+                                <option label="139" value="38744">139 </option>
+                                <option label="140" value="38745">140 </option>
+                                <option label="141" value="38746">141 </option>
+                                <option label="142" value="38747">142 </option>
+                                <option label="143" value="38748">143 </option>
+                                <option label="144" value="38749">144 </option>
+                                <option label="145" value="38750">145 </option>
+                                <option label="146" value="38751">146 </option>
+                                <option label="147" value="38752">147 </option>
+                                <option label="148" value="38753">148 </option>
+                                <option label="149" value="38754">149 </option>
+                                <option label="150" value="38755">150 </option>
+                                <option label="151" value="38756">151 </option>
+                                <option label="152" value="38757">152 </option>
+                                <option label="153" value="38758">153 </option>
+                                <option label="154" value="38759">154 </option>
+                                <option label="155" value="38760">155 </option>
+                                <option label="156" value="38761">156 </option>
+                                <option label="157" value="38762">157 </option>
+                                <option label="158" value="38763">158 </option>
+                                <option label="159" value="38764">159 </option>
+                                <option label="160" value="38765">160 </option>
+                                <option label="161" value="38766">161 </option>
+                                <option label="162" value="38767">162 </option>
+                                <option label="163" value="38768">163 </option>
+                                <option label="164" value="38769">164 </option>
+                                <option label="165" value="38770">165 </option>
+                                <option label="166" value="38771">166 </option>
+                                <option label="167" value="38772">167 </option>
+                                <option label="168" value="38773">168 </option>
+                                <option label="169" value="38774">169 </option>
+                                <option label="170" value="38775">170 </option>
+                                <option label="171" value="38776">171 </option>
+                                <option label="172" value="38777">172 </option>
+                                <option label="173" value="38778">173 </option>
+                                <option label="174" value="38779">174 </option>
+                                <option label="175" value="38780">175 </option>
+                                <option label="176" value="38781">176 </option>
+                                <option label="177" value="38782">177 </option>
+                                <option label="178" value="38783">178 </option>
+                                <option label="179" value="38784">179 </option>
+                                <option label="180" value="38785">180 </option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" class="btn_box">
+                            <button type="button" class="button" id="button_sub" onclick="submit_ygd()">确定</button>
+                            <button type="button" class="button" onclick="hide_ygd()">取消</button>
+                            <input type="hidden" name="rec_id" id="rec_id">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <input type="hidden" name="temp_value" id="temp_value">
+            <script language="javascript">
+  <!--
+	  function checkGoodsChk() {
+		  var has_goods = 0;
+		  for (i = 0; i < formCart.elements.length; i ++ ) {
+			  var checkItem = formCart.elements[i];
+			  if (checkItem.name=='goods_id[]' && checkItem.type=='checkbox' && checkItem.checked==true) {
+				 has_goods++;
+			  }
+		  }
+		  if (has_goods>0) {
+			  goPreCheck();
+		  } else {
+			  alert("您未选择任何商品");
+		  }
+	  }
+
+	  function show_ygd(pid) {
+		  var ids = "right_sphere_id|right_cylinder_id|right_axis_id|pd_id|left_sphere_id|left_cylinder_id|left_axis_id".split("|");
+		  for (var i=0; i<ids.length; i++) {
+			  $$(ids[i]).options[0].selected = true;
+		  }
+
+		  getYgd(pid);
+		  $$("ygd_input").style.top = getPosition($$("btn_"+pid)).y+"px";
+		  $$("ygd_input").style.display = "block";
+		  $$("rec_id").value = pid;
+	  }
+
+	  function getPosition(sender) {
+		  var e=sender,E=e;
+		  var x=e.offsetLeft;
+		  var y=e.offsetTop;
+		  var agent = navigator.userAgent.toLowerCase() ;
+		  while (e=e.offsetParent) {
+			  var P=e.parentNode;
+			  if(agent.indexOf("chrome") == -1) {
+				  while (P!=(E=E.parentNode)) {
+					  x-=E.scrollLeft;
+					  y-=E.scrollTop;
+				  }
+			  }
+			  x+=e.offsetLeft;
+			  y+=e.offsetTop;
+			  E=e;
+		  }
+		  return {"x":x,"y":y};
+	  }
+
+	  function hide_ygd() {
+		  $$("ygd_input").style.display = "none";
+	  }
+
+
+	  function submit_ygd() {
+		   var ygd = "";
+		   var ygd_attr = "";
+		   var id = $$("rec_id").value;
+
+		   ygd_attr += $$("right_sphere_id") ? $$("right_sphere_id").value+"," : "";
+		   ygd_attr += $$("right_cylinder_id") ? $$("right_cylinder_id").value+"," : "";
+		   ygd_attr += $$("right_axis_id") ? $$("right_axis_id").value+"," : "";
+		   ygd_attr += $$("pd_id") ? $$("pd_id").value+"," : "";
+		   ygd_attr += $$("left_sphere_id") ? $$("left_sphere_id").value+"," : "";
+		   ygd_attr += $$("left_cylinder_id") ? $$("left_cylinder_id").value+"," : "";
+		   ygd_attr += $$("left_axis_id") ? $$("left_axis_id").value : "";
+
+		   ygd += $$("right_sphere_id") ? "右眼度数:"+$$("right_sphere_id").options[$$("right_sphere_id").selectedIndex].text+"\n" : "";
+		   ygd += $$("right_cylinder_id") ? "右眼散光:"+$$("right_cylinder_id").options[$$("right_cylinder_id").selectedIndex].text+"\n" : "";
+		   ygd += $$("right_axis_id") ? "右眼轴位:"+$$("right_axis_id").options[$$("right_axis_id").selectedIndex].text+"\n" : "";
+		   ygd += $$("pd_id") ? "瞳距:"+$$("pd_id").options[$$("pd_id").selectedIndex].text+"\n" : "";
+		   ygd += $$("left_sphere_id") ? "左眼度数:"+$$("left_sphere_id").options[$$("left_sphere_id").selectedIndex].text+"\n" : "";
+		   ygd += $$("left_cylinder_id") ? "左眼散光:"+$$("left_cylinder_id").options[$$("left_cylinder_id").selectedIndex].text+"\n" : "";
+		   ygd += $$("left_axis_id") ? "左眼轴位:"+$$("left_axis_id").options[$$("left_axis_id").selectedIndex].text : "";
+
+		   var err = 0;
+		   if ($$("right_sphere_id").value=="") {
+			   alert("请选择右眼度数");
+			   $$("right_sphere_id").focus();
+			   err = err + 1;
+		   } else if ($$("left_sphere_id").value=="") {
+			   alert("请选择左眼度数");
+			   $$("left_sphere_id").focus();
+			   err = err + 1;
+		   } else if ($$("pd_id").value=="") {
+			   alert("请选择瞳距");
+			   $$("pd_id").focus();
+			   err = err + 1;
+		   }
+		   if ($$("right_cylinder_id").value!="" && $$("right_axis_id").value=="") {
+			   alert("请选择右眼轴位");
+			   $$("right_axis_id").focus();
+			   err = err + 1;
+		   }
+		   if ($$("left_cylinder_id").value!="" && $$("left_axis_id").value=="") {
+			   alert("请选择左眼轴位");
+			   $$("left_axis_id").focus();
+			   err = err + 1;
+		   }
+
+		   if (err>0) {
+			   return false;
+		   } else {
+			   Ajax.call('flow.php', 'step=update_ygd&rec_id='+id+'&ygd='+ygd, oprResponse, 'POST', 'JSON');
+		   }
+	   }
+
+	   function oprResponse(data) {
+		   if (data.err_msg) {
+			   alert(data.err_msg);
+		   } else {
+			   //alert(data.result);
+			   if ($$("right_sphere_id")) {
+				   $$("col_right_ds_"+$$("rec_id").value).innerHTML=$$("right_sphere_id").options[$$("right_sphere_id").selectedIndex].text;
+			   }
+			   if ($$("right_cylinder_id")) {
+				   $$("col_right_sg_"+$$("rec_id").value).innerHTML=$$("right_cylinder_id").options[$$("right_cylinder_id").selectedIndex].text;
+			   }
+			   if ($$("right_axis_id")) {
+				   $$("col_right_zw_"+$$("rec_id").value).innerHTML=$$("right_axis_id").options[$$("right_axis_id").selectedIndex].text;
+			   }
+			   if ($$("pd_id")) {
+				   $$("col_tongju_"+$$("rec_id").value).innerHTML=$$("pd_id").options[$$("pd_id").selectedIndex].text;
+			   }
+			   if ($$("left_sphere_id")) {
+				   $$("col_left_ds_"+$$("rec_id").value).innerHTML=$$("left_sphere_id").options[$$("left_sphere_id").selectedIndex].text;
+			   }
+			   if ($$("left_cylinder_id")) {
+				   $$("col_left_sg_"+$$("rec_id").value).innerHTML=$$("left_cylinder_id").options[$$("left_cylinder_id").selectedIndex].text;
+			   }
+			   if ($$("left_axis_id")) {
+				   $$("col_left_zw_"+$$("rec_id").value).innerHTML=$$("left_axis_id").options[$$("left_axis_id").selectedIndex].text;
+			   }
+			   hide_ygd();
+		   }
+	   }
+
+	   function getYgd(pid) {
+		   Ajax.call('flow.php', 'step=get_ygd&rec_id='+pid, function(data){
+			   if (data.err_msg=='') {
+				   selectOptions("right_sphere_id",data.result.right_ds);
+				   selectOptions("right_cylinder_id",data.result.right_sg);
+				   if (data.result.right_sg && (data.result.right_zw != "" && data.result.right_zw != "0.00" && data.result.right_sg!=0 && data.result.right_sg!="请选择")) {
+					   $$("right_axis_id").disabled = false;
+					   selectOptions("right_axis_id",data.result.right_zw);
+				   }
+				   selectOptions("pd_id",data.result.tongju);
+				   selectOptions("left_sphere_id",data.result.left_ds);
+				   selectOptions("left_cylinder_id",data.result.left_sg);
+				   if (data.result.left_sg && (data.result.left_zw != "" && data.result.left_zw != "0.00" && data.result.left_sg!=0 && data.result.left_sg!="请选择")) {
+					   $$("left_axis_id").disabled = false;
+					   selectOptions ("left_axis_id",data.result.left_zw);
+				   }
+			   }
+		   }, 'GET', 'JSON');
+	   }
+
+	   function selectOptions (id,value) {
+		   var objSelect = document.getElementById(id);
+		   for(var i=0; i<objSelect.options.length; i++) {
+			   if(parseFloat(objSelect.options[i].text) == value) {
+				   objSelect.options[i].selected = true;
+				   break;
+			  }else{
+				  objSelect.options[0].selected = true;
+				  }
+		  }
+	   }
+
+	   function fittingsCheck(gid) {
+			var id = $$("rec_id").value;
+			var degreeRange = $$("degree_range"+id).value;
+			var cyl_range = $$("cyl_range"+id).value;
+			if (degreeRange) {
+				degreeRange1 = degreeRange ? degreeRange.split(":") : "";
+				cyl_range1 = cyl_range ? cyl_range.split(":") : "";
+				var left_ds = parseFloat($$("left_sphere_id").options[$$("left_sphere_id").selectedIndex].text);
+				var right_ds = parseFloat($$("right_sphere_id").options[$$("right_sphere_id").selectedIndex].text);
+				var left_cyl = parseFloat($$("left_cylinder_id").options[$$("left_cylinder_id").selectedIndex].text);
+				var right_cyl = parseFloat($$("right_cylinder_id").options[$$("right_cylinder_id").selectedIndex].text);
+				if (left_ds<degreeRange1[0] || left_ds>degreeRange1[1]) {
+					selectOptions ("left_sphere_id",$$("temp_value").value);
+					alert("您选择的光度不在此镜片范围");
+					return false;
+				}
+				if (right_ds<degreeRange1[0] || right_ds>degreeRange1[1]) {
+					selectOptions ("right_sphere_id",$$("temp_value").value);
+					alert("您选择的光度不在此镜片范围");
+					return false;
+				}
+				if (left_cyl<cyl_range1[0] || left_cyl>cyl_range1[1]) {
+					selectOptions ("left_cylinder_id",$$("temp_value").value);
+
+					onlockAxis2($$("temp_value").value,'left_axis_id');
+					alert("您选择的散光不在此镜片范围");
+					return false;
+				}
+				if (right_cyl<cyl_range1[0] || right_cyl>cyl_range1[1]) {
+					selectOptions ("right_cylinder_id",$$("temp_value").value);
+					onlockAxis2($$("temp_value").value,'right_axis_id');
+					alert("您选择的散光不在此镜片范围");
+					return false;
+				}
+			}
+		}
+
+		function setTempValue(obj) {
+			$$("temp_value").value = obj.options[obj.selectedIndex].text;
+
+		}
+
+		function  onlockAxis2(obj,id) {
+			if (obj =="请选择" ||obj == "" ) {
+				$$(id).options[0].selected = true;
+				$$(id).disabled = true;
+
+			} else {
+				$$(id).disabled = false;
+			}
+		}
+
+
+		function  onlockAxis(obj,id) {
+			if (obj.value!="") {
+				$$(id).disabled = false;
+			} else {
+				$$(id).options[0].selected = true;
+				$$(id).disabled = true;
+			}
+		}
+
+		function checkGoods(obj) {
+			Ajax.call('flow.php?step=goods_check', 'rec_id=' + obj.value + "&type=" + (obj.checked==true ? 1 : 0), function(data){
+				if (data.error==0 && data.content.goods_price!="" && data.content.goods_price!="undefined") {
+					$$("total_desc").innerHTML = data.content.goods_price;
+				}
+			}, 'POST', 'JSON');
+		}
+
+  //-->
+            </script>
+            <div class="w clearfix">
+                <div style="padding:20px;border:1px solid #ddd;" class="clearfix">
+
+                    <div class="Left"> <a href="javascript:;" onclick="javascript:if (confirm('确定清空购物车?')) location.href='/flow.php?step=clear'; " class="delete_cart_goods" title="清空购物车">清空购物车</a> </div>
+                    <div class="Right r"> <span class="f14 bt"><b>商品总价</b>(不含运费)：<span class="red yen total_price"><span id="total_desc">¥0.00</span></span></span> </div>
+
+
+                </div>
+            </div>
+            <div class="cart_button w r mt20">
+                <a href="http://www.o-j-o.cn/" class="back" title="继续购物" style="float:left;"></a> <a title="去结算" href="javascript:;" onclick="checkGoodsChk();return false;" class="check" style="float:right;"> </a>
+
+
+            </div>
+            <script language="javascript">
+
+
+function changenum(rec_id, diff) {
+	if (document.getElementById('goods_number_' + rec_id).value==1 && diff==-1) {
+		return false;
+	} else {
+		var goods_number =Number(document.getElementById('goods_number_' + rec_id).value) + Number(diff);
+		change_goods_number(rec_id,goods_number);
+	}
+}
+            function change_goods_number(rec_id, goods_number)
+            {
+               Ajax.call('/flow.php?step=ajax_update_cart', 'rec_id=' + rec_id +'&goods_number=' + goods_number, change_goods_number_response, 'POST','JSON');
+            }
+            function change_goods_number_response(result)
+            {
+                if (result.error == 0)
+                {
+                    var rec_id = result.rec_id;
+                    document.getElementById('goods_number_' +rec_id).value = result.goods_number;//更新数量
+                    document.getElementById('goods_subtotal_' +rec_id).innerHTML = result.goods_subtotal;//更新小计
+                    if (result.goods_number <= 0)
+                    {// 数量为零则隐藏所在行
+                        document.getElementById('tr_goods_' +rec_id).style.display = 'none';
+                        document.getElementById('tr_goods_' +rec_id).innerHTML = '';
+                    }
+                    document.getElementById('total_desc').innerHTML =result.total_price;//更新合计
+                    if (document.getElementById('ECS_CARTINFO'))
+                    {//更新购物车数量
+                       document.getElementById('ECS_CARTINFO').innerHTML = result.cart_info;
+                    }
+                }
+                else if (result.message != '')
+                {
+                    alert(result.message);
+                }
+            }
+
+
+
+            </script>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <div class="blank5"></div>
+    <div class="footer-box">
+        <div class="footer-table" id="footer_table">
+            <div class="w clearfix">
+                <div class="someInfo Left">
+                    <div class="phone">
+                        <h4>客服热线</h4>
+                        <p>400-663-2226</p>
+                    </div>
+                    <div class="count">截止今日，OJO眼镜在全国已有实体店<strong class="red">28</strong>家</div>
+                    <a class="look" href="http://www.o-j-o.cn/#" target="_blank" title="查看全国实体店">查看全国实体店</a>
+
+                </div>
+                <table class="dtab Left clearfix" cellspacing="0" cellpadding="0">
+                    <tbody>
+                        <tr>
+                            <td><div class="line"></div></td>
+                            <td>
+                                <dl class="dl">
+                                    <dt class="dt">关于OJO眼镜</dt>
+                                    <dd class="dd">
+                                        <a href="http://www.o-j-o.cn/ojoarc-2/1.html" target="_blank" rel="nofollow">免责声明</a>
+                                        <a href="http://www.o-j-o.cn/ojoarc-2/2.html" target="_blank" rel="nofollow">隐私保护</a>
+                                        <a href="http://www.o-j-o.cn/ojoarc-2/3.html" target="_blank" rel="nofollow">诚聘英才</a>
+                                        <a href="http://www.o-j-o.cn/ojoarc-2/4.html" target="_blank" rel="nofollow">联系我们</a>
+
+
+                                    </dd>
+                                </dl>
+                            </td>
+                            <td><div class="line"></div></td>
+                            <td>
+                                <dl class="dl">
+                                    <dt class="dt">新手指南</dt>
+                                    <dd class="dd">
+                                        <a href="http://www.o-j-o.cn/ojoarc-5/12.html" target="_blank" rel="nofollow">订单状态</a>
+                                        <a href="http://www.o-j-o.cn/ojoarc-5/698.html" target="_blank" rel="nofollow">注册新用户</a>
+                                        <a href="http://www.o-j-o.cn/ojoarc-5/699.html" target="_blank" rel="nofollow">优惠券使用指南</a>
+                                        <a href="http://www.o-j-o.cn/ojoarc-5/700.html" target="_blank" rel="nofollow">订购眼镜流程</a>
+
+
+                                    </dd>
+                                </dl>
+                            </td>
+                            <td><div class="line"></div></td>
+                            <td>
+                                <dl class="dl">
+                                    <dt class="dt">支付配送</dt>
+                                    <dd class="dd">
+                                        <a href="http://www.o-j-o.cn/ojoarc-6/13.html" target="_blank" rel="nofollow">支付方式</a>
+                                        <a href="http://www.o-j-o.cn/ojoarc-6/14.html" target="_blank" rel="nofollow">货到付款</a>
+                                        <a href="http://www.o-j-o.cn/ojoarc-6/15.html" target="_blank" rel="nofollow">快递及运费</a>
+
+
+                                    </dd>
+                                </dl>
+                            </td>
+                            <td><div class="line"></div></td>
+                            <td>
+                                <dl class="dl">
+                                    <dt class="dt">售后服务</dt>
+                                    <dd class="dd">
+                                        <a href="http://www.o-j-o.cn/ojoarc-7/16.html" target="_blank" rel="nofollow">30天无理由退换货</a>
+                                        <a href="http://www.o-j-o.cn/ojoarc-7/17.html" target="_blank" rel="nofollow">如何办理退款、退货</a>
+                                        <a href="http://www.o-j-o.cn/ojoarc-7/18.html" target="_blank" rel="nofollow">投诉建议</a>
+
+
+                                    </dd>
+                                </dl>
+                            </td>
+                            <td><div class="line"></div></td>
+                            <td>
+                                <dl class="dl">
+                                    <dt class="dt">帮助中心</dt>
+                                    <dd class="dd">
+                                        <a href="http://www.o-j-o.cn/ojoarc-8/19.html" target="_blank" rel="nofollow">友情链接</a>
+                                        <a href="http://www.o-j-o.cn/ojoarc-8/69.html" target="_blank" rel="nofollow">如何读懂验光单</a>
+                                        <a href="http://www.o-j-o.cn/ojoarc-8/317.html" target="_blank" rel="nofollow">购物协议</a>
+                                        <a href="http://www.o-j-o.cn/ojoarc-8/318.html" target="_blank" rel="nofollow">用户注册协议</a>
+
+
+                                    </dd>
+                                </dl>
+                            </td>
+                            <td><div class="line"></div></td>
+
+
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="weixin Right" style="width:140px;">
+                    <h2 class="title">OJO眼镜微信公众号</h2>
+                    <div class="img"><a target="_blank"><img src="~/Pattern/OJO/框架眼镜_files/weixin.jpg" alt="微信公众号" width="100" height="100"></a></div>
+                    <p>随手扫一扫,优惠全知晓!</p>
+                </div>
+            </div>
+        </div>
+        <div class="w footer-icon">
+            <div class="order Left">
+                <div class="orderInput">
+                    <input type="text" class="email" id="JS_subscribe" value="请输入您的电子邮箱" onfocus="if(this.value=='请输入您的电子邮箱')this.value=''" onblur="if(this.value=='')this.value='请输入您的电子邮箱'">
+                </div>
+                <a href="javascript:void(0);" title="订阅" class="orderBtn" onclick="subscribe();">订阅</a>
+            </div>
+            <div class="iconMap Right">
+                <a><img class="ic1" src="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/blank.gif" alt="送货服务" width="149" height="30"></a><a><img class="ic2" src="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/blank.gif" alt="45天退换" width="149" height="30"></a><a><img class="ic3" src="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/blank.gif" alt="正品保证" width="149" height="30"></a><a><img class="ic4" src="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/blank.gif" alt="买贵补差" width="149" height="30"></a><a><img class="ic5" src="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/blank.gif" alt="支付宝特约商家" width="149" height="30"></a>
+            </div>
+        </div>
+        <div class="w footer-copy">
+            <a href="http://www.o-j-o.cn/">OJO首页</a> |     <a href="http://www.o-j-o.cn/ojo_school.html">眼镜知识</a> |     <a href="http://www.o-j-o.cn/kuangjia">框架眼镜</a> |     <a href="http://www.o-j-o.cn/sun/">太阳眼镜</a> |     <a href="http://www.o-j-o.cn/yjp/">眼镜片</a> |     <a href="http://www.o-j-o.cn/ojoarc-8/19.html">友情链接</a> |     <a href="http://www.o-j-o.cn/ojoarc-2/4.html">联系我们</a> |     <a href="http://www.o-j-o.cn/ojoarc-7/18.html">投诉建议</a> |     <a href="http://www.o-j-o.cn/sitemap.xml">网站地图 </a>
+            <br>
+            © 2005-2019 OJO眼镜网 版权所有，并保留所有权利。<br>
+            E-mail: service@o-j-o.cn<br>
+            ICP备案证书号:<a href="http://www.miibeian.gov.cn/" target="_blank" rel="nofollow" style="color:#666">苏ICP备14046264号-1</a><br>
+        </div>
+    </div>
+
+
+
+
+
+    <script type="text/javascript">
+var process_request = "正在处理您的请求...";
+var username_empty = "- 用户名不能为空。";
+var username_shorter = "- 用户名长度不能少于 3 个字符。";
+var username_invalid = "- 用户名只能是由字母数字以及下划线组成。";
+var password_empty = "- 登录密码不能为空。";
+var password_shorter = "- 登录密码不能少于 6 个字符。";
+var confirm_password_invalid = "- 两次输入密码不一致";
+var email_empty = "- Email 为空";
+var email_invalid = "- Email 不是合法的地址";
+var agreement = "- 您没有接受协议";
+var msn_invalid = "- msn地址不是一个有效的邮件地址";
+var qq_invalid = "- QQ号码不是一个有效的号码";
+var home_phone_invalid = "- 家庭电话不是一个有效号码";
+var office_phone_invalid = "- 办公电话不是一个有效号码";
+var mobile_phone_invalid = "- 手机号码不是一个有效号码";
+var msg_un_blank = "* 用户名不能为空";
+var msg_un_length = "* 用户名最长不得超过7个汉字";
+var msg_un_format = "* 用户名含有非法字符";
+var msg_un_registered = "* 用户名已经存在,请重新输入";
+var msg_can_rg = "* 可以注册";
+var msg_email_blank = "* 邮件地址不能为空";
+var msg_email_registered = "* 邮箱已存在,请重新输入";
+var msg_email_format = "* 邮件地址不合法";
+var msg_blank = "不能为空";
+var no_select_question = "- 您没有完成密码提示问题的操作";
+var passwd_balnk = "- 密码中不能包含空格";
+var mobile_empty = "手机号码不能为空";
+var username_exist = "用户名 %s 已经存在";
+var compare_no_goods = "您没有选定任何需要比较的商品或者比较的商品数少于 2 个。";
+var btn_buy = "购买";
+var is_cancel = "取消";
+var select_spe = "请选择商品属性";
+    </script>
+    <script src="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/page_header.js"></script>
+</body>
+</html>

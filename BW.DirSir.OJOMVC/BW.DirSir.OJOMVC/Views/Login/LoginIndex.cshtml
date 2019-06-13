@@ -1,0 +1,453 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- base href="http://www.o-j-o.cn/" -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="pragma" content="no-cache">
+    <title>登录</title>
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <link href="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/mll_common.css" rel="stylesheet" />
+    <link href="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/user3.css" rel="stylesheet" />
+    <link href="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/easydialog.css" rel="stylesheet" />
+
+    <script src="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/common.js"></script>
+    <script src="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/user.js"></script>
+    <script src="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/transport.js"></script>
+    <script src="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/utils.js"></script>
+    <script src="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/easydialog.js"></script>
+
+    <style>
+        .logo-r {
+            height: 95px;
+            width: 100%;
+            background: #fff;
+            box-shadow: 1px 1px 5px rgba(98,105,109,0.5);
+        }
+
+        .logo-info-r {
+            width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 5;
+        }
+
+            .logo-info-r a.logo {
+                display: block;
+                width: 290px;
+                height: 70px;
+                background: url(/themes/ojo/images/login_logo.png) no-repeat;
+                margin: 20px 0 0 0px;
+                float: left;
+            }
+
+            .logo-info-r span.findpw {
+                height: 44px;
+                line-height: 44px;
+                font-size: 20px;
+                margin: 26px 0px 0px 15px;
+                float: right;
+                padding: 0px 15px;
+            }
+    </style>
+</head>
+<body style="margin-top:0;" class="root_body">
+    <script type="text/javascript">(function () { var screenWidth = window.screen.width; if (screenWidth >= 1280) { document.body.className = "root_body"; window.LOAD = true; } else { window.LOAD = false; } })()</script>
+    <div id="" class="user_all w" style="position:relative; width:100%; ">
+
+
+
+
+
+        <div class="logo-r">
+            <div class="logo-info-r"><a href="http://www.o-j-o.cn/" title="返回OJO眼镜网首页" class="logo"></a><span class="findpw">欢迎登录</span></div>
+        </div>
+        <style>
+
+            /*头部*/
+
+
+            /*****登陆页面*****/
+            /*登陆表单*/
+            .login-wrap {
+                position: relative;
+                height: 475px;
+                z-index: 1;
+            }
+
+                .login-wrap .login-form {
+                    position: absolute;
+                    z-index: 1;
+                    width: 306px;
+                    background: #fff;
+                    padding: 20px;
+                    overflow: visible;
+                    top: 40px;
+                    right: 0;
+                }
+
+                    .login-wrap .login-form .login-tit {
+                        height: 27px;
+                        line-height: 27px;
+                        font-size: 20px;
+                    }
+
+                        .login-wrap .login-form .login-tit .regist-link {
+                            float: right;
+                            font-size: 12px;
+                        }
+
+                            .login-wrap .login-form .login-tit .regist-link i {
+                                font-family: sinum;
+                                font-weight: bold;
+                            }
+
+                    .login-wrap .login-form .msg-wrap {
+                        min-height: 31px;
+                        height: auto;
+                        margin: 5px 0;
+                        visibility: hidden;
+                    }
+
+                        .login-wrap .login-form .msg-wrap .msg-error {
+                            position: relative;
+                            background: #fff6f7;
+                            color: #E31939;
+                            border: 1px solid #ff6d82;
+                            padding: 3px 10px 3px 40px;
+                            line-height: 18px;
+                            min-height: 18px;
+                        }
+
+                        .login-wrap .login-form .msg-wrap .msg-icon {
+                            position: absolute;
+                            left: 13px;
+                            top: 5px;
+                            display: block;
+                            width: 14px;
+                            height: 14px;
+                            background-position: 0 0;
+                        }
+
+                    .login-wrap .login-form .item {
+                        overflow: hidden;
+                        height: 38px;
+                        position: relative;
+                        border: 1px solid #ddd;
+                        margin-bottom: 20px;
+                    }
+
+                    .login-wrap .login-form .item-error {
+                        border: 1px solid #E31939;
+                    }
+
+                    .login-wrap .login-form .item .icon {
+                        display: block;
+                        width: 20px;
+                        height: 20px;
+                        position: absolute;
+                        left: 10px;
+                        top: 9px;
+                    }
+
+                    .login-wrap .login-form .item-name .icon {
+                        background-position: 0 -15px !important;
+                    }
+
+                    .login-wrap .login-form .item-password .icon {
+                        background-position: 0 -36px !important;
+                    }
+
+                    .login-wrap .login-form .item .text {
+                        line-height: 18px;
+                        height: 18px;
+                        border: 0;
+                        padding: 10px 0 10px 40px;
+                        width: 264px;
+                        float: none;
+                        overflow: hidden;
+                        font-size: 14px;
+                    }
+
+                    .login-wrap .login-form .item-authcode {
+                        border: 0;
+                        height: 40px;
+                    }
+
+                        .login-wrap .login-form .item-authcode .item-detail {
+                            border: 1px solid #ddd;
+                            width: 100px;
+                        }
+
+                        .login-wrap .login-form .item-authcode .item-error {
+                            border-color: #E31939;
+                        }
+
+                        .login-wrap .login-form .item-authcode .icon {
+                            background-position: 0 -57px !important;
+                        }
+
+                        .login-wrap .login-form .item-authcode .text {
+                            width: 60px;
+                            float: left;
+                        }
+
+                        .login-wrap .login-form .item-authcode .img {
+                            margin-left: 5px;
+                            margin-top: 5px;
+                        }
+
+                    .login-wrap .login-form .safety {
+                        color: #666666;
+                        margin-bottom: 15px;
+                        overflow: hidden;
+                        height: 18px;
+                        line-height: 18px;
+                    }
+
+                        .login-wrap .login-form .safety .checkbox {
+                            vertical-align: middle;
+                            margin-right: 3px;
+                            float: none;
+                        }
+
+                    .login-wrap .login-form .login-btn {
+                        margin-bottom: 20px;
+                        overflow: hidden;
+                    }
+
+                        .login-wrap .login-form .login-btn .btn-img {
+                            font-family: 微软雅黑;
+                            width: 300px;
+                            height: 35px;
+                            font-size: 14px;
+                            color: #FFF;
+                            background: #E31939;
+                            text-align: center;
+                            line-height: 35px;
+                            text-decoration: none;
+                            cursor: pointer;
+                            letter-spacing: 2px;
+                            border: none;
+                        }
+
+                    .login-wrap .login-form .item-coagent {
+                        height: 24px;
+                        line-height: 24px;
+                        overflow: hidden;
+                    }
+
+                        .login-wrap .login-form .item-coagent a {
+                            float: left;
+                            height: 24px;
+                            padding-left: 26px;
+                            position: relative;
+                            margin-right: 25px;
+                        }
+
+                            .login-wrap .login-form .item-coagent a i {
+                                display: block;
+                                width: 24px;
+                                height: 24px;
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                            }
+
+                                .login-wrap .login-form .item-coagent a i.weixin {
+                                    background-position: -24px 0;
+                                }
+
+                                .login-wrap .login-form .item-coagent a i.qq {
+                                    background-position: -24px -25px;
+                                }
+
+                                .login-wrap .login-form .item-coagent a i.sina {
+                                    background-position: -24px -50px;
+                                }
+
+                                .login-wrap .login-form .item-coagent a i.alipay {
+                                    background-position: -24px -76px;
+                                }
+
+                            .login-wrap .login-form .item-coagent a.last {
+                                margin: 0;
+                            }
+
+            /*登陆广告图*/
+            .login-banner {
+                height: 475px;
+                background: #E31939;
+            }
+
+                .login-banner .banner-bg {
+                    display: block;
+                    width: 100%;
+                    height: 475px;
+                    background: url(themes/ojo/images/login-banner.jpg) no-repeat 0 0;
+                }
+
+            .login-wrap .login-form .item .icon, .logo-info-r a.sina, .logo-info-r a.qq, .login-wrap .login-form .msg-wrap .msg-icon, .logo-info-r .weixin span, .login-wrap .login-form .item-coagent a i {
+                background: url(themes/ojo/images/user-icon.png) no-repeat;
+            }
+
+            .w990 {
+                width: 990px !important;
+                margin: 0 auto;
+            }
+
+            .position-relative {
+                position: relative !important;
+            }
+
+            .fl {
+                float: left;
+            }
+
+            .fr {
+                float: right;
+            }
+
+            .main-color {
+                color: #E31939;
+            }
+
+            i, cite, em, strong, th {
+                font-style: normal;
+                font-weight: normal;
+            }
+        </style>
+        <div class="w" style="width:100%;">
+
+            <div class="login-wrap" id="entry">
+                <div class="login-banner">
+                    <div class="w990 position-relative">
+                        <a class="banner-bg" href="#" target="_blank"></a>
+                        <div class="login-form">
+                            <form id="JS_login_form" name="formLogin" action="javascript:signIn()" method="post" onsubmit="return userLogin()">
+                                <div class="login-tit">用户登录<a class="regist-link main-color" href="http://www.o-j-o.cn/user.php?act=register">立即注册 <i>&gt;</i></a></div>
+                                <div class="form">
+                                    <div class="msg-wrap">
+                                        <div class="msg-error">
+                                            <i class="msg-icon"></i><span id="msg-error-text" class="msg-error-text"></span>
+                                        </div>
+                                    </div>
+                                    <div class="item item-name">
+                                        <i class="icon"></i>
+                                        <input type="text" id="username" name="username" class="text" tabindex="1" placeholder="手机号/用户名/邮箱">
+                                    </div>
+                                    <div class="item item-password">
+                                        <i class="icon"></i>
+                                        <input type="password" id="password" name="password" class="text" tabindex="2" placeholder="密码">
+                                    </div>
+                                    <div class="item item-authcode clearfix" id="o-authcode">
+                                        <div class="item-detail fl">
+                                            <i class="icon"></i>
+                                            <input type="text" id="authcode" name="captcha" class="text text-1" tabindex="3">
+                                        </div>
+                                        <label class="img fl"> <img src="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/captcha.png" alt="captcha" style="vertical-align: middle;cursor: pointer;" onclick="this.src='captcha.php?is_login=1&amp;'+Math.random()"> </label>
+                                    </div>
+                                    <div class="safety" id="autoentry">
+                                        <label for="JS_rember_username" class="mar-b"><input type="checkbox" value="1" name="remember" id="JS_rember_username" class="checkbox">自动登录</label>
+
+                                        <a href="http://www.o-j-o.cn/user.php?act=mpassword_name" class="forget Right user_type_user" tabindex="6">手机短信找回密码？</a>
+
+                                    </div>
+                                    <div class="login-btn">
+                                        <input type="hidden" name="act" value="act_login">
+                                        <input type="hidden" name="back_act" value="./index.php">
+                                        <input type="submit" name="submit" class="btn-img btn-entry" id="loginsubmit" value="立即登录">
+                                    </div>
+                                    <div class="item-coagent">
+                                        <a href="http://www.o-j-o.cn/user.php?act=oath&amp;type=weixin"><i class="weixin"></i>微信</a>
+                                        <a href="http://www.o-j-o.cn/user.php?act=oath&amp;type=qq"><i class="qq"></i>QQ</a>
+                                        <a href="http://www.o-j-o.cn/user.php?act=oath&amp;type=weibo"><i class="sina"></i>新浪</a>
+                                        <a href="http://www.o-j-o.cn/user.php?act=oath&amp;type=alipay" class="last"><i class="alipay"></i>支付宝</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+
+    </div>
+    <div class="footer-box" style="padding-top:50px;">
+        <div class="w footer-copy">
+            <a href="http://www.o-j-o.cn/">OJO首页</a>
+            |
+            <a href="http://www.o-j-o.cn/ojo_school.html">眼镜知识</a>
+            |
+            <a href="http://www.o-j-o.cn/kuangjia">框架眼镜</a>
+            |
+            <a href="http://www.o-j-o.cn/sun/">太阳眼镜</a>
+            |
+            <a href="http://www.o-j-o.cn/yjp/">眼镜片</a>
+            |
+            <a href="http://www.o-j-o.cn/ojoarc-8/19.html">友情链接</a>
+            |
+            <a href="http://www.o-j-o.cn/ojoarc-2/4.html">联系我们</a>
+            |
+            <a href="http://www.o-j-o.cn/ojoarc-7/18.html">投诉建议</a>
+            |
+            <a href="http://www.o-j-o.cn/sitemap.xml">网站地图 </a>
+            <br>
+            © 2005-2019 OJO眼镜网 版权所有，并保留所有权利。<br>
+            E-mail: service@o-j-o.cn<br>
+
+            ICP备案证书号:<a href="http://www.miibeian.gov.cn/" target="_blank">苏ICP备14046264号-1</a><br>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var process_request = "正在处理您的请求...";
+        var username_empty = "- 用户名不能为空。";
+        var username_shorter = "- 用户名长度不能少于 3 个字符。";
+        var username_invalid = "- 用户名只能是由字母数字以及下划线组成。";
+        var password_empty = "- 登录密码不能为空。";
+        var password_shorter = "- 登录密码不能少于 6 个字符。";
+        var confirm_password_invalid = "- 两次输入密码不一致";
+        var email_empty = "- Email 为空";
+        var email_invalid = "- Email 不是合法的地址";
+        var agreement = "- 您没有接受协议";
+        var msn_invalid = "- msn地址不是一个有效的邮件地址";
+        var qq_invalid = "- QQ号码不是一个有效的号码";
+        var home_phone_invalid = "- 家庭电话不是一个有效号码";
+        var office_phone_invalid = "- 办公电话不是一个有效号码";
+        var mobile_phone_invalid = "- 手机号码不是一个有效号码";
+        var msg_un_blank = "* 用户名不能为空";
+        var msg_un_length = "* 用户名最长不得超过7个汉字";
+        var msg_un_format = "* 用户名含有非法字符";
+        var msg_un_registered = "* 用户名已经存在,请重新输入";
+        var msg_can_rg = "* 可以注册";
+        var msg_email_blank = "* 邮件地址不能为空";
+        var msg_email_registered = "* 邮箱已存在,请重新输入";
+        var msg_email_format = "* 邮件地址不合法";
+        var msg_blank = "不能为空";
+        var no_select_question = "- 您没有完成密码提示问题的操作";
+        var passwd_balnk = "- 密码中不能包含空格";
+        var mobile_empty = "手机号码不能为空";
+        var username_exist = "用户名 %s 已经存在";
+    </script>
+
+
+
+</body>
+</html>
+<!--
+GERMANY:2013-11-28 15:26:03
+-->

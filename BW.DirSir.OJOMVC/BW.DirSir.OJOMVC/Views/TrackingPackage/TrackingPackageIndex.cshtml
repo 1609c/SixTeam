@@ -1,0 +1,854 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- base href="http://www.o-j-o.cn/" -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+
+    <title>跟踪包裹</title>
+
+    <link rel="shortcut icon" href="http://www.o-j-o.cn/favicon.ico">
+    <link href="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/mll_common.css" rel="stylesheet" />
+    <link href="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/base.css" rel="stylesheet" />
+    <link href="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/user.css" rel="stylesheet" />
+    <link href="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/iconfont.css" rel="stylesheet" />
+    <link href="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/easydialog.css" rel="stylesheet" />
+    <link href="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/ygd.css" rel="stylesheet" />
+    <script src="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/jquery-1.js"></script>
+    <script src="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/jquery.js"></script>
+    <script src="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/common.js"></script>
+    <script src="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/user.js"></script>
+    <script src="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/transport.js"></script>
+    <script src="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/utils.js"></script>
+    <script src="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/easydialog.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            window.__Object_toJSONString = Object.prototype.toJSONString;
+            delete Object.prototype.toJSONString;
+        });
+    </script>
+</head>
+<body class="root_body">
+    <script type="text/javascript">(function () { var screenWidth = window.screen.width; if (screenWidth >= 1280) { document.body.className = "root_body"; window.LOAD = true; } else { window.LOAD = false; } })()</script>
+    <script type="text/javascript">
+        var process_request = "正在处理您的请求...";
+    </script>
+
+    <script>
+        //初始空函数，防止页面报错，勿删，函数真身在页脚。
+        function _show_() { };
+        function _hide_() { };
+        var City = {
+            init: function () { }
+        }
+        window.$ = window.$ || {};
+        window.M = window.M || {};
+        $.__IMG = M.__IMG = '' || '';
+        var M = M || {};
+        M.getCookie = function (a) {
+            var e;
+            if (document.cookie && document.cookie !== "") {
+                var d = document.cookie.split(";");
+                var f = d.length;
+                for (var c = 0; c < f; c++) {
+                    var b = d[c].replace(/(^\s*)|(\s*$)/g, "");
+                    if (b.substring(0, a.length + 1) == (a + "=")) {
+                        e = decodeURIComponent(b.substring(a.length + 1));
+                        break;
+                    }
+                }
+            }
+            return e;
+        };</script>
+    <div class="page-header">
+        <div class="w clearfix">
+            <div class="logo Left">
+                <div class="ojologo">
+                    <h1><a href="http://www.o-j-o.cn/">ojo眼镜网</a></h1>
+                </div>
+            </div>
+            <div class="topAd Left">  </div>
+            <div class="topArea Right">
+                <div style=" width:100%; position:absolute; left:0; top:0; background:#eee repeat-x center -3px; z-index:280; height:30px; line-height:30px; ">
+                    <div class="wrapper">
+                        <div class="top-bar">
+                            <div class="container">
+                                <ul class="top-member">
+
+                                    <li class="wellcome"><span>Hello，Welcome To OJO ！</span></li>
+                                    <li class="more-menu">
+                                        <div id="all"><a class="menu-link" rel="nofollow" href="http://www.o-j-o.cn/user.php"><span>A003</span></a> </div>
+                                    </li>
+                                    <li><a rel="nofollow" href="http://www.o-j-o.cn/user.php?act=logout" class="out">退出</a></li>
+                                </ul>
+                                <ul class="top-panel">
+                                    <li> <a href="javascript:;" style="margin-right:18px" class="goshop1">购物车<span style="color:red; font-weight:bold; padding-left:5px;" id="cartInfo_number">0</span></a> </li>
+                                    <li> <a href="http://www.o-j-o.cn/flow.php" target="_blank" style="margin-right:18px" class="goshop2" rel="nofollow"></a><s style=" margin-right:8px;"></s> </li>
+                                    <li class="quick-area" style="position:relative;"> <span class="mobile"><a href="http://www.o-j-o.cn/mobile" rel="nofollow" target="_blank">手机版</a></span><i class="qrcode-tb" style="display:none;"></i><s></s> </li>
+                                    <li> <a href="http://www.o-j-o.cn/ojoarc-5/12.html" target="_blank" style="margin-right:7px" rel="nofollow">帮助中心</a><s></s> </li>
+                                    <li class="li-sitemap menu-item">
+                                        <h3 class="menu-hd"><i class="iconfont2"></i><span>最新消息</span><b></b></h3>
+                                        <div class="menu-bd">
+                                            <div class="site-cate site-hot">
+                                                <h2>热点关注<span>Hot</span></h2>
+                                                <ul class="hot_img">
+                                                    <table cellspacing="0" cellpadding="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <a href="http://www.o-j-o.cn/" target="_blank"><img src="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/1517990412137994443.jpg" alt="" width="300" height="175" border="0"></a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </ul>
+                                            </div>
+                                            <div class="site-cate site-hot" style="padding-left:30px; width:250px;">
+                                                <h2>配镜指南<span>Guide</span></h2>
+                                                <ul>
+                                                    <li><a href="http://www.o-j-o.cn/ojoarc-pjfx/1117.html" title="防蓝光眼镜，真的可以阻碍蓝光吗？" target="_blank">防蓝光眼镜，真的可以阻碍蓝光吗？</a></li>
+                                                    <li><a href="http://www.o-j-o.cn/ojoarc-pjfx/1115.html" title="无框眼镜适合什么镜片？" target="_blank">无框眼镜适合什么镜片？</a></li>
+                                                    <li><a href="http://www.o-j-o.cn/ojoarc-pjfx/1111.html" title="验光，应该是去医院还是去眼镜店？" target="_blank">验光，应该是去医院还是去眼镜店？</a></li>
+                                                    <li><a href="http://www.o-j-o.cn/ojoarc-pjfx/1107.html" title="网上配镜，怎么确定镜框是否适合自己？" target="_blank">网上配镜，怎么确定镜框是否适合自己？</a></li>
+                                                    <li><a href="http://www.o-j-o.cn/ojoarc-pjfx/1106.html" title="大圆脸应该戴什么形状的眼镜？" target="_blank">大圆脸应该戴什么形状的眼镜？</a></li>
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script type="text/javascript">
+
+    <!--
+                    function checkSearchForm() {
+                        if (document.getElementById('keyword').value) {
+                            return true;
+                        }
+                        else {
+                            $.alert("请输入搜索关键词！");
+                            return false;
+                        }
+                    }
+                    -->
+
+                </script>
+                <div class="btMap">
+                    <div class="Left search_box">
+                        <div class="search">
+                            <script src="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/page.js" type="text/javascript"></script>
+                            <div id="search_tips" style="display:none;"></div>
+
+                            <form id="searchForm" name="searchForm" method="get" action="/search.php" onsubmit="return checkSearchForm()">
+                                <div class="sideShadow"></div>
+                                <input id="keyword" type="text" name="keywords" onclick="this.select();" class="keyWord" value="纯钛眼镜" autocomplete="off" onfocus="javascript:if(this.value=='纯钛眼镜'){this.value=''}" onblur="javascript:if(this.value==''){this.value='纯钛眼镜'}" onkeyup="STip(this.value);">
+                                <input type="submit" class="submit" value="搜 索">
+                                <input type="hidden" name="fl" value="q">
+                            </form>
+                            <div style="display: none;" id="JS_search_suggest" class="suggest"> </div>
+                        </div>
+                        <div style="margin-top:5px;color:#999;width:416px;height:17px;overflow:hidden;">
+                            热门搜索：
+                            <a href="http://www.o-j-o.cn/search.php?keywords=%E6%A1%86%E6%9E%B6%E7%9C%BC%E9%95%9C" style="color:#999;" target="_blank" rel="nofollow">框架眼镜</a>
+                            <a href="http://www.o-j-o.cn/search.php?keywords=%E5%A4%AA%E9%98%B3%E7%9C%BC%E9%95%9C" style="color:#999;" target="_blank" rel="nofollow">太阳眼镜</a>
+                            <a href="http://www.o-j-o.cn/search.php?keywords=%E7%9C%BC%E9%95%9C%E7%89%87" style="color:#999;" target="_blank" rel="nofollow">眼镜片</a>
+                            <a href="http://www.o-j-o.cn/search.php?keywords=OJO" style="color:#999;" target="_blank" rel="nofollow">OJO</a>
+                            <a href="http://www.o-j-o.cn/search.php?keywords=%E5%A5%B3%E5%A3%AB%E5%A4%AA%E9%98%B3%E9%95%9C" style="color:#999;" target="_blank" rel="nofollow">女士太阳镜</a>
+                            <a href="http://www.o-j-o.cn/search.php?keywords=%E9%92%9B%E6%9E%B6" style="color:#999;" target="_blank" rel="nofollow">钛架</a>
+                        </div>
+                    </div>
+                    <div id="JS_header_cart_handler" class="cart Right">
+                        <a href="http://www.o-j-o.cn/flow.php" class="cartLink"><span class="" rel="nofollow">购物车</span><strong class="red cartCount" id="cartInfo_number1">0</strong><span>件</span><span class="arrow"></span></a>
+                        <span class="blank2 none"> </span>
+                        <div id="JS_header_cart_list" class="hideCart" data-status="0"> <div class="loadLay" style="color:#626262;">您的购物车中还没有商品，先去选购吧！</div> </div>
+                    </div>
+                    <div class="cart Right mymll"> <a href="http://www.o-j-o.cn/user.php" class="cartLink" rel="nofollow"><span class="">我的中心</span></a> </div>
+                </div>
+            </div>
+        </div>
+        <script language="javascript">
+            function drop_cart_goods(id) {
+                $.ajax({
+                    type: "POST",
+                    url: "/flow.php?step=drop_cart_goods&id=" + id,
+                    cache: false,
+                    dataType: 'json',     //接受数据格式
+                    data: '',
+                    success: function (result) {
+                        $('#JS_header_cart_list').html(result.message);
+                        $('#cartInfo_number').html(result.goods_num);
+                    }
+                });
+            }
+
+        </script>
+        <div class="globa-nav">
+            <div class="shadow"></div>
+            <div class="w">
+                <div class="allGoodsCat Left" id="JS_common_head_menu_812">
+                    <a href="javascript:;" class="menuEvent"><strong class="catName">全部商品分类</strong><span class="arrow"></span></a>
+                    <div class="expandMenu" id="JS_head_expand_menu_target"></div>
+                </div>
+                <div class="allMenu Left">
+                    <a id="JS_Header_Home_Link" href="http://www.o-j-o.cn/" title="首页" class="index current">首页</a>
+                    <a href="http://www.o-j-o.cn/kuangjia" style="position:relative;">框架眼镜</a>
+                    <a href="http://www.o-j-o.cn/sun" style="position:relative;">太阳镜</a>
+                    <a href="http://www.o-j-o.cn/yjp" style="position:relative;">眼镜片</a>
+                    <a href="http://www.o-j-o.cn/sunjinshi" style="position:relative;">近视太阳镜<img src="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/new4.gif" style="position:absolute;background:none;right:0px;top:-5px;"></a>
+                </div>
+                <div class="sideMenu2 Right"><a class="menu" href="http://www.o-j-o.cn/ojo_buyer.html" title="返现免单" style="position:relative;">返现免单<img src="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/hot.gif" style="position:absolute;background:none;right:-10px;top:-15px;"></a><a class="menu" href="http://www.o-j-o.cn/ojo_school.html" target="_blank" title="">眼镜知识</a></div>
+            </div>
+        </div>
+        <!---
+        <div class="globa-submenu"  id="globa_submenu">
+          <div class="w clearfix">
+            <div class="frameLeft"></div>
+            <div class="menuBox">
+              <div class="Left"> &ensp;<a href="/search_list_hot.html" class="red" target="_blank" title="热销">热销</a>&ensp;|&ensp; <a href="/search_list_best.html" class="red" target="_blank" title="推荐">推荐</a>&ensp;|&ensp; <a  href="/group_buy.html" target="_blank" title="团购">团购</a>&ensp;|&ensp; <a href="/search_list_promotion.html" target="_blank" title="特价">特价</a>&ensp;|&ensp; <a href="/activity.html" target="_blank" title="套装">套装</a>&ensp;|&ensp; <a href="/search_list_new.html" target="_blank" title="新品">新品</a>&ensp;|&ensp; <a href="/expr.html" target="_blank" title="OJO体验店">OJO体验店</a> </div>
+              <div id="JS_temai_n_menu" class="Left none"></div>
+            </div>
+            <div class="frameRight"></div>
+          </div>
+        </div>
+         --->
+        <div id="JS_all_head_category_menu" style="display:none">
+            <div class="all_cat">
+                <div class="list JS_catItem">
+                    <dl class="cat">
+                        <dt class="catName"><strong class="cat1 Left"><a href="http://www.o-j-o.cn/kuangjia/" target="_blank">框架眼镜</a></strong><span class="Right">&gt;</span></dt>
+                        <dd class="catList">
+                            <a href="http://www.o-j-o.cn/renqun/" target="_blank" title="适合人群">适合人群</a>
+                            <a href="http://www.o-j-o.cn/caizhi/" target="_blank" title="材质">材质</a>
+                            <a href="http://www.o-j-o.cn/price/" target="_blank" title="价格">价格</a>
+                            <a href="http://www.o-j-o.cn/jslx/" target="_blank" title="类型">类型</a>
+                            <a href="http://www.o-j-o.cn/biankuang/" target="_blank" title="边框">边框</a>
+                            <a href="http://www.o-j-o.cn/kuangxing/" target="_blank" title="框形">框形</a>
+                            <a href="http://www.o-j-o.cn/pinpai/" target="_blank" title="品牌">品牌</a>
+                        </dd>
+                    </dl>
+                    <div id="JS_globa_goods_cat_target_1" class="hideMap">
+                        <div class="topMap clearfix">
+                            <div class="subCat clearfix">
+                                <div class="col">
+
+                                    <dl class="item no_border">
+                                        <dt class="dt"><a href="http://www.o-j-o.cn/renqun/" class="red" target="_blank">适合人群</a></dt>
+                                        <dd class="dd" style=" margin-top:2px;">
+                                            <span>| <a href="http://www.o-j-o.cn/nanshi/" target="_blank">男士</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/nvshi/" target="_blank">女士</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/ertong/" target="_blank">儿童</a> </span>
+
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="item ">
+                                        <dt class="dt"><a href="http://www.o-j-o.cn/caizhi/" class="red" target="_blank">材质</a></dt>
+                                        <dd class="dd" style=" margin-top:2px;">
+                                            <span>| <a href="http://www.o-j-o.cn/taijia/" target="_blank">纯钛</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/bancai/" target="_blank">板材</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/jinshu/" target="_blank">金属合金</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/tr90/" target="_blank">TR</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/mucai/" target="_blank">木材</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/jsandbc/" target="_blank">塑钢</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/jsandtr/" target="_blank">镁铝合金</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/pccaizhi/" target="_blank">PC</a> </span>
+
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="item ">
+                                        <dt class="dt"><a href="http://www.o-j-o.cn/price/" class="red" target="_blank">价格</a></dt>
+                                        <dd class="dd" style=" margin-top:2px;">
+                                            <span>| <a href="http://www.o-j-o.cn/0_200/" target="_blank">0-200元</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/201_400/" target="_blank">201-400元</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/401_600/" target="_blank">401-600元</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/601_800/" target="_blank">601-800元</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/800shang/" target="_blank">800元以上</a> </span>
+
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="item ">
+                                        <dt class="dt"><a href="http://www.o-j-o.cn/jslx/" class="red" target="_blank">类型</a></dt>
+                                        <dd class="dd" style=" margin-top:2px;">
+                                            <span>| <a href="http://www.o-j-o.cn/jsflg/" target="_blank">防蓝光</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/jstj/" target="_blank">钛架</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/jsqb/" target="_blank">切边眼镜</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/jstjyj/" target="_blank">套镜</a> </span>
+
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="item ">
+                                        <dt class="dt"><a href="http://www.o-j-o.cn/biankuang/" class="red" target="_blank">边框</a></dt>
+                                        <dd class="dd" style=" margin-top:2px;">
+                                            <span>| <a href="http://www.o-j-o.cn/quankuang/" target="_blank">全框</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/bankuang/" target="_blank">半框</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/wukuang/" target="_blank">无框</a> </span>
+
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="item ">
+                                        <dt class="dt"><a href="http://www.o-j-o.cn/kuangxing/" class="red" target="_blank">框形</a></dt>
+                                        <dd class="dd" style=" margin-top:2px;">
+                                            <span>| <a href="http://www.o-j-o.cn/pianfang/" target="_blank">偏方框</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/pianyuan/" target="_blank">偏圆框</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/duobianxing/" target="_blank">多边形</a> </span>
+
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="item ">
+                                        <dt class="dt"><a href="http://www.o-j-o.cn/pinpai/" class="red" target="_blank">品牌</a></dt>
+                                        <dd class="dd" style=" margin-top:2px;">
+                                            <span>| <a href="http://www.o-j-o.cn/brandmu/" target="_blank">欧杰欧/OJO</a> </span>
+
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="bottomMap">
+                                <h2 class="f14 red">推荐品牌</h2>
+                                <ul class="brand clearfix">
+                                    <li class="li addTopBorder"><a href="http://www.o-j-o.cn/kuangjia-b6-min0-max0-attr0/" target="_blank" title="首页-导航菜单-分类ID1-推荐品牌1" class="img"><img src="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/1543537208213215291.jpg" heiht="50" alt="OJO/欧杰欧" width="85"></a><a class="name">OJO/欧杰欧</a></li>
+
+                                </ul>
+                                <h2 class="f14 red mt20">促销活动</h2>
+                                <ul class="activity"></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="list JS_catItem">
+                    <dl class="cat">
+                        <dt class="catName"><strong class="cat2 Left"><a href="http://www.o-j-o.cn/sun/" target="_blank">太阳镜</a></strong><span class="Right">&gt;</span></dt>
+                        <dd class="catList">
+                            <a href="http://www.o-j-o.cn/sunrenqun/" target="_blank" title="适合人群">适合人群</a>
+                            <a href="http://www.o-j-o.cn/sunpinpai/" target="_blank" title="品牌">品牌</a>
+                            <a href="http://www.o-j-o.cn/sungongneng/" target="_blank" title="功能">功能</a>
+                            <a href="http://www.o-j-o.cn/sunkuangxing/" target="_blank" title="框形">框形</a>
+                            <a href="http://www.o-j-o.cn/sunprice/" target="_blank" title="价格">价格</a>
+                            <a href="http://www.o-j-o.cn/suncaizhi/" target="_blank" title="材质">材质</a>
+                        </dd>
+                    </dl>
+                    <div id="JS_globa_goods_cat_target_1" class="hideMap">
+                        <div class="topMap clearfix">
+                            <div class="subCat clearfix">
+                                <div class="col">
+
+                                    <dl class="item no_border">
+                                        <dt class="dt"><a href="http://www.o-j-o.cn/sunrenqun/" class="red" target="_blank">适合人群</a></dt>
+                                        <dd class="dd" style=" margin-top:2px;">
+                                            <span>| <a href="http://www.o-j-o.cn/sunnanshi/" target="_blank">男士</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/sunnvshi/" target="_blank">女士</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/sunertong/" target="_blank">儿童</a> </span>
+
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="item ">
+                                        <dt class="dt"><a href="http://www.o-j-o.cn/sunpinpai/" class="red" target="_blank">品牌</a></dt>
+                                        <dd class="dd" style=" margin-top:2px;">
+                                            <span>| <a href="http://www.o-j-o.cn/sunojo/" target="_blank">欧杰欧OJO</a> </span>
+
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="item ">
+                                        <dt class="dt"><a href="http://www.o-j-o.cn/sungongneng/" class="red" target="_blank">功能</a></dt>
+                                        <dd class="dd" style=" margin-top:2px;">
+                                            <span>| <a href="http://www.o-j-o.cn/sunpianguang/" target="_blank">偏光太阳镜</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/sunjiapian/" target="_blank">夹片</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/sunjinshi/" target="_blank">近视太阳镜</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/tyertong/" target="_blank">儿童太阳镜</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/sunqixing/" target="_blank">骑行太阳镜</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/taiyangbianse/" target="_blank">变色太阳镜</a> </span>
+
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="item ">
+                                        <dt class="dt"><a href="http://www.o-j-o.cn/sunkuangxing/" class="red" target="_blank">框形</a></dt>
+                                        <dd class="dd" style=" margin-top:2px;">
+                                            <span>| <a href="http://www.o-j-o.cn/sunhama/" target="_blank">蛤蟆镜</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/sunfangxing/" target="_blank">方形太阳镜</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/suntuoyuan/" target="_blank">圆形太阳镜</a> </span>
+
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="item ">
+                                        <dt class="dt"><a href="http://www.o-j-o.cn/sunprice/" class="red" target="_blank">价格</a></dt>
+                                        <dd class="dd" style=" margin-top:2px;">
+                                            <span>| <a href="http://www.o-j-o.cn/sun0_100/" target="_blank">0-100元</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/sun101_300/" target="_blank">101-300元</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/sun301_500/" target="_blank">301-500元</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/sun500shang/" target="_blank">500元以上</a> </span>
+
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="item ">
+                                        <dt class="dt"><a href="http://www.o-j-o.cn/suncaizhi/" class="red" target="_blank">材质</a></dt>
+                                        <dd class="dd" style=" margin-top:2px;">
+                                            <span>| <a href="http://www.o-j-o.cn/sunbancai/" target="_blank">板材</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/sunjinshu/" target="_blank">金属合金</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/sunjsandbc/" target="_blank">镁铝合金</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/sunjsandtr/" target="_blank">纯钛</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/suntr90/" target="_blank">TR90</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/taiyangmucai/" target="_blank">木材</a> </span>
+
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="bottomMap">
+                                <h2 class="f14 red">推荐品牌</h2>
+                                <ul class="brand clearfix">
+                                    <li class="li addTopBorder"><a href="http://www.o-j-o.cn/sun-b6-min0-max0-attr0/" target="_blank" title="首页-导航菜单-分类ID2-推荐品牌1" class="img"><img src="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/1543537156379976332.jpg" heiht="50" alt="OJO/欧杰欧" width="85"></a><a class="name">OJO/欧杰欧</a></li>
+
+                                </ul>
+                                <h2 class="f14 red mt20">促销活动</h2>
+                                <ul class="activity"></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="list JS_catItem">
+                    <dl class="cat">
+                        <dt class="catName"><strong class="cat3 Left"><a href="http://www.o-j-o.cn/yjp/" target="_blank">眼镜片</a></strong><span class="Right">&gt;</span></dt>
+                        <dd class="catList">
+                            <a href="http://www.o-j-o.cn/yjpdushu/" target="_blank" title="适合度数">适合度数</a>
+                            <a href="http://www.o-j-o.cn/yjpzs/" target="_blank" title="折射率">折射率</a>
+                            <a href="http://www.o-j-o.cn/yjpcl/" target="_blank" title="材料">材料</a>
+                            <a href="http://www.o-j-o.cn/yjpprice/" target="_blank" title="价格">价格</a>
+                            <a href="http://www.o-j-o.cn/yjplx/" target="_blank" title="类型">类型</a>
+                            <a href="http://www.o-j-o.cn/yjpbrand/" target="_blank" title="品牌">品牌</a>
+                        </dd>
+                    </dl>
+                    <div id="JS_globa_goods_cat_target_1" class="hideMap">
+                        <div class="topMap clearfix">
+                            <div class="subCat clearfix">
+                                <div class="col">
+
+                                    <dl class="item no_border">
+                                        <dt class="dt"><a href="http://www.o-j-o.cn/yjpdushu/" class="red" target="_blank">适合度数</a></dt>
+                                        <dd class="dd" style=" margin-top:2px;">
+                                            <span>| <a href="http://www.o-j-o.cn/yjp0_300/" target="_blank">0-300度</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/yjp325_500/" target="_blank">325-600度</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/yjp525_800/" target="_blank">625-800度</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/yjp825shang/" target="_blank">800度以上</a> </span>
+
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="item ">
+                                        <dt class="dt"><a href="http://www.o-j-o.cn/yjpzs/" class="red" target="_blank">折射率</a></dt>
+                                        <dd class="dd" style=" margin-top:2px;">
+                                            <span>| <a href="http://www.o-j-o.cn/yjp156/" target="_blank">1.56</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/yjp161/" target="_blank">1.61</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/yjp167/" target="_blank">1.67</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/yjp174/" target="_blank">1.74</a> </span>
+
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="item ">
+                                        <dt class="dt"><a href="http://www.o-j-o.cn/yjpcl/" class="red" target="_blank">材料</a></dt>
+                                        <dd class="dd" style=" margin-top:2px;">
+                                            <span>| <a href="http://www.o-j-o.cn/yjpsz/" target="_blank">树脂镜片</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/yjppc/" target="_blank">PC太空片</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/yjpbl/" target="_blank">玻璃镜片</a> </span>
+
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="item ">
+                                        <dt class="dt"><a href="http://www.o-j-o.cn/yjpprice/" class="red" target="_blank">价格</a></dt>
+                                        <dd class="dd" style=" margin-top:2px;">
+                                            <span>| <a href="http://www.o-j-o.cn/yjp0_200/" target="_blank">0-200元</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/yjp201_500/" target="_blank">201-500元</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/yjp501_800/" target="_blank">501-800元</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/yjp800shang/" target="_blank">800元以上</a> </span>
+
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="item ">
+                                        <dt class="dt"><a href="http://www.o-j-o.cn/yjplx/" class="red" target="_blank">类型</a></dt>
+                                        <dd class="dd" style=" margin-top:2px;">
+                                            <span>| <a href="http://www.o-j-o.cn/yjpjs/" target="_blank">近视透明片</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/yjpbs/" target="_blank">变色片</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/yjpffs/" target="_blank">防辐射</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/yjppl/" target="_blank">抗疲劳</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/yjpls/" target="_blank">防蓝光</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/yjppg/" target="_blank">偏光片</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/yjplh/" target="_blank">老花片</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/dzp/" target="_blank">定制片</a> </span>
+
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="item ">
+                                        <dt class="dt"><a href="http://www.o-j-o.cn/yjpbrand/" class="red" target="_blank">品牌</a></dt>
+                                        <dd class="dd" style=" margin-top:2px;">
+                                            <span>| <a href="http://www.o-j-o.cn/yjpojo/" target="_blank">OJO/欧杰欧</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/yjpzeiss/" target="_blank">ZEISS/蔡司</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/yjpessilor/" target="_blank">Essilor/依视路</a> </span>
+
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="bottomMap">
+                                <h2 class="f14 red">推荐品牌</h2>
+                                <ul class="brand clearfix">
+                                    <li class="li addTopBorder"><a href="http://www.o-j-o.cn/yjp-b8-min0-max0-attr0/" target="_blank" title="首页-导航菜单-分类ID3-推荐品牌3" class="img"><img src="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/1543536501685035271.jpg" heiht="50" alt="Essilor/依视路" width="85"></a><a class="name">Essilor/依视路</a></li>
+                                    <li class="li addTopBorder"><a href="http://www.o-j-o.cn/yjp-b7-min0-max0-attr0/" target="_blank" title="首页-导航菜单-分类ID3-推荐品牌2" class="img"><img src="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/1543536428264582479.jpg" heiht="50" alt="ZEISS/蔡司" width="85"></a><a class="name">ZEISS/蔡司</a></li>
+                                    <li class="li "><a href="http://www.o-j-o.cn/yjp-b6-min0-max0-attr0/" target="_blank" title="首页-导航菜单-分类ID3-推荐品牌1" class="img"><img src="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/1543537238738201763.jpg" heiht="50" alt="OJO/欧杰欧" width="85"></a><a class="name">OJO/欧杰欧</a></li>
+                                </ul>
+                                <h2 class="f14 red mt20">促销活动</h2>
+                                <ul class="activity"></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="list JS_catItem">
+                    <dl class="cat">
+                        <dt class="catName"><strong class="cat4 Left"><a href="http://www.o-j-o.cn/qitayj/" target="_blank">功能眼镜</a></strong><span class="Right">&gt;</span></dt>
+                        <dd class="catList">
+                            <a href="http://www.o-j-o.cn/lhj/" target="_blank" title="老花镜">老花镜</a>
+                            <a href="http://www.o-j-o.cn/ydj/" target="_blank" title="运动镜">运动镜</a>
+                            <a href="http://www.o-j-o.cn/peijian/" target="_blank" title="配件">配件</a>
+                        </dd>
+                    </dl>
+                    <div id="JS_globa_goods_cat_target_1" class="hideMap">
+                        <div class="topMap clearfix">
+                            <div class="subCat clearfix">
+                                <div class="col">
+
+                                    <dl class="item no_border">
+                                        <dt class="dt"><a href="http://www.o-j-o.cn/lhj/" class="red" target="_blank">老花镜</a></dt>
+                                        <dd class="dd" style=" margin-top:2px;">
+                                            <span>| <a href="http://www.o-j-o.cn/nslhj/" target="_blank">男士老花镜</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/nvlhj/" target="_blank">女士老花镜</a> </span>
+
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="item ">
+                                        <dt class="dt"><a href="http://www.o-j-o.cn/ydj/" class="red" target="_blank">运动镜</a></dt>
+                                        <dd class="dd" style=" margin-top:2px;">
+                                            <span>| <a href="http://www.o-j-o.cn/yyj/" target="_blank">游泳镜</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/lqj/" target="_blank">篮球镜</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/qixing/" target="_blank">骑行镜</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/huaxue/" target="_blank">滑雪镜</a> </span>
+
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="item ">
+                                        <dt class="dt"><a href="http://www.o-j-o.cn/peijian/" class="red" target="_blank">配件</a></dt>
+                                        <dd class="dd" style=" margin-top:2px;">
+                                            <span>| <a href="http://www.o-j-o.cn/yjkpj/" target="_blank">眼镜框配件</a> </span>
+                                            <span>| <a href="http://www.o-j-o.cn/jinghe/" target="_blank">镜盒/镜布</a> </span>
+
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="bottomMap">
+                                <h2 class="f14 red">推荐品牌</h2>
+                                <ul class="brand clearfix"></ul>
+                                <h2 class="f14 red mt20">促销活动</h2>
+                                <ul class="activity"></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hotMenu">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td><strong>热荐</strong> </td>
+                                <td>  <a href="http://www.o-j-o.cn/sunjinshi/" title="近视太阳镜" target="_blank">近视太阳镜</a>  <a href="http://www.o-j-o.cn/lhj/" title="老花镜" target="_blank">老花镜</a>  </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="otherMenu">
+                    <dl class="specal_zone">
+                        <dd> <a href="http://www.o-j-o.cn/search_hot.html" target="_blank" title="热销" class="light">热销</a> <a href="http://www.o-j-o.cn/search_best.html" target="_blank" title="推荐" class="light">推荐</a>  <a href="http://www.o-j-o.cn/search_promotion.html" target="_blank" title="特价">特价</a><a href="http://www.o-j-o.cn/search_new.html" target="_blank" title="新品">新品<i class="specal_new"></i></a> <a href="http://www.o-j-o.cn/brand.html" target="_blank" title="套装" class="light">品牌中心</a>  <a href="http://www.o-j-o.cn/expr.html" target="_blank" title="OJO体验店">OJO体验店</a></dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="cat_shadow"></div>
+        </div>
+
+        <script type="text/javascript" src="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/page_header.js"></script>
+
+        <div class="user-content clearfix">
+
+            <div class="user-side">
+
+                <div class="user-perinfo-ny">
+                    <div class="profile clearfix">
+                        <div class="avatar"> <a href="http://www.o-j-o.cn/user.php" class="u-pic"> <img src="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/touxiang.jpg" alt=""></a> </div>
+                        <div class="name">
+                            <h2>A003</h2>
+                            <div class="user-rank user-rank-1">QQ用户</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="user-mod">
+                    <div class="side-menu">
+                        <dl>
+                            <dt><i class="square"></i><span>订单中心</span></dt>
+                            <dd>
+                                <p><a href="http://www.o-j-o.cn/user.php?act=order_list">我的订单</a></p>
+                                <p><a href="http://www.o-j-o.cn/user.php?act=address_list">收货地址</a></p>
+                                <p><a href="http://www.o-j-o.cn/user.php?act=booking_list">缺货登记</a></p>
+                                <p><a href="http://www.o-j-o.cn/user.php?act=order_back">退换货订单</a></p>
+                                <p><a href="http://www.o-j-o.cn/user.php?act=collection_list">我的收藏</a></p>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt><i class="square"></i><span>账户管理</span></dt>
+                            <dd>
+                                <p><a href="http://www.o-j-o.cn/user.php?act=profile">用户信息</a></p>
+                                <p><a href="http://www.o-j-o.cn/user.php?act=safety">账户安全</a></p>
+                                <p><a href="http://www.o-j-o.cn/user.php?act=prescription">我的验光单</a></p>
+                                <p><a href="http://www.o-j-o.cn/user.php?act=message_list">我的留言</a></p>
+                                <p><a href="http://www.o-j-o.cn/user.php?act=affiliate">我的推荐</a></p>
+                                <p><a href="http://www.o-j-o.cn/user.php?act=comment_list">我的评论</a></p>
+                                <p><a href="http://www.o-j-o.cn/user.php?act=order_art_list2">我要晒单</a></p>
+                                <p><a href="http://www.o-j-o.cn/user.php?act=order_art_list">我的晒单</a></p>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt><i class="square"></i><span>我的参与</span></dt>
+                            <dd>
+                                <p class="last"><a href="http://www.o-j-o.cn/user.php?act=bonus">我的优惠券</a></p>
+                                <p><a class="red" href="http://www.o-j-o.cn/user.php?act=track_packages">跟踪包裹</a></p>
+                                <p><a href="http://www.o-j-o.cn/user.php?act=account_log">资金管理</a></p>
+                                <p><a href="http://www.o-j-o.cn/user.php?act=logout" style="color:#a60201">安全退出</a></p>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <script>
+                $(function () {
+                    $(".user-side .side-menu dt .square").click(function () {
+                        var $this = $(this);
+                        var dd = $this.parent("dt").siblings("dd");
+                        $this.toggleClass("square-plus");
+                        dd.slideToggle();
+                    });
+                })
+            </script>
+
+            <div class="user-main clearfix">
+
+                <div class="clearfix" style="_height:1%;">
+
+                    <div class="user-mod">
+                        <div class="user-title">
+                            <h2>跟踪包裹</h2>
+                        </div>
+                        <div class="user-order-list user-trackpack">
+                            <div class="no_records">
+                                <i class="no_icon_two"></i>
+                                <div class="no_info"><h3></h3></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <form name="selectPageForm" action="/user.php" method="get">
+
+
+                        <div id="pager" class="pagebar">
+
+
+                        </div>
+
+
+                    </form>
+                    <script type="Text/Javascript" language="JavaScript">
+<!--
+
+                        function selectPage(sel) {
+                            sel.form.submit();
+                        }
+
+                        //-->
+                    </script>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="blank"></div>
+    <div class="footer-box">
+        <div class="footer-table" id="footer_table">
+            <div class="w clearfix">
+                <div class="someInfo Left">
+                    <div class="phone">
+                        <h4>客服热线</h4>
+                        <p>400-663-2226</p>
+                    </div>
+                    <div class="count">截止今日，OJO眼镜在全国已有实体店<strong class="red">28</strong>家</div>
+                    <a class="look" href="http://www.o-j-o.cn/#" target="_blank" title="查看全国实体店">查看全国实体店</a>
+
+                </div>
+                <table class="dtab Left clearfix" cellspacing="0" cellpadding="0">
+                    <tbody>
+                        <tr>
+                            <td><div class="line"></div></td>
+                            <td>
+                                <dl class="dl">
+                                    <dt class="dt">关于OJO眼镜</dt>
+                                    <dd class="dd">
+                                        <a href="http://www.o-j-o.cn/ojoarc-2/1.html" target="_blank" rel="nofollow">免责声明</a>
+                                        <a href="http://www.o-j-o.cn/ojoarc-2/2.html" target="_blank" rel="nofollow">隐私保护</a>
+                                        <a href="http://www.o-j-o.cn/ojoarc-2/3.html" target="_blank" rel="nofollow">诚聘英才</a>
+                                        <a href="http://www.o-j-o.cn/ojoarc-2/4.html" target="_blank" rel="nofollow">联系我们</a>
+
+
+                                    </dd>
+                                </dl>
+                            </td>
+                            <td><div class="line"></div></td>
+                            <td>
+                                <dl class="dl">
+                                    <dt class="dt">新手指南</dt>
+                                    <dd class="dd">
+                                        <a href="http://www.o-j-o.cn/ojoarc-5/12.html" target="_blank" rel="nofollow">订单状态</a>
+                                        <a href="http://www.o-j-o.cn/ojoarc-5/698.html" target="_blank" rel="nofollow">注册新用户</a>
+                                        <a href="http://www.o-j-o.cn/ojoarc-5/699.html" target="_blank" rel="nofollow">优惠券使用指南</a>
+                                        <a href="http://www.o-j-o.cn/ojoarc-5/700.html" target="_blank" rel="nofollow">订购眼镜流程</a>
+
+
+                                    </dd>
+                                </dl>
+                            </td>
+                            <td><div class="line"></div></td>
+                            <td>
+                                <dl class="dl">
+                                    <dt class="dt">支付配送</dt>
+                                    <dd class="dd">
+                                        <a href="http://www.o-j-o.cn/ojoarc-6/13.html" target="_blank" rel="nofollow">支付方式</a>
+                                        <a href="http://www.o-j-o.cn/ojoarc-6/14.html" target="_blank" rel="nofollow">货到付款</a>
+                                        <a href="http://www.o-j-o.cn/ojoarc-6/15.html" target="_blank" rel="nofollow">快递及运费</a>
+
+
+                                    </dd>
+                                </dl>
+                            </td>
+                            <td><div class="line"></div></td>
+                            <td>
+                                <dl class="dl">
+                                    <dt class="dt">售后服务</dt>
+                                    <dd class="dd">
+                                        <a href="http://www.o-j-o.cn/ojoarc-7/16.html" target="_blank" rel="nofollow">30天无理由退换货</a>
+                                        <a href="http://www.o-j-o.cn/ojoarc-7/17.html" target="_blank" rel="nofollow">如何办理退款、退货</a>
+                                        <a href="http://www.o-j-o.cn/ojoarc-7/18.html" target="_blank" rel="nofollow">投诉建议</a>
+
+
+                                    </dd>
+                                </dl>
+                            </td>
+                            <td><div class="line"></div></td>
+                            <td>
+                                <dl class="dl">
+                                    <dt class="dt">帮助中心</dt>
+                                    <dd class="dd">
+                                        <a href="http://www.o-j-o.cn/ojoarc-8/19.html" target="_blank" rel="nofollow">友情链接</a>
+                                        <a href="http://www.o-j-o.cn/ojoarc-8/69.html" target="_blank" rel="nofollow">如何读懂验光单</a>
+                                        <a href="http://www.o-j-o.cn/ojoarc-8/317.html" target="_blank" rel="nofollow">购物协议</a>
+                                        <a href="http://www.o-j-o.cn/ojoarc-8/318.html" target="_blank" rel="nofollow">用户注册协议</a>
+
+
+                                    </dd>
+                                </dl>
+                            </td>
+                            <td><div class="line"></div></td>
+
+
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="weixin Right" style="width:140px;">
+                    <h2 class="title">OJO眼镜微信公众号</h2>
+                    <div class="img"><a target="_blank"><img src="~/Pattern/OJO/框架眼镜_files/weixin.jpg" alt="微信公众号" width="100" height="100"></a></div>
+                    <p>随手扫一扫,优惠全知晓!</p>
+                </div>
+            </div>
+        </div>
+        <div class="w footer-icon">
+            <div class="order Left">
+                <div class="orderInput">
+                    <input type="text" class="email" id="JS_subscribe" value="请输入您的电子邮箱" onfocus="if(this.value=='请输入您的电子邮箱')this.value=''" onblur="if(this.value=='')this.value='请输入您的电子邮箱'">
+                </div>
+                <a href="javascript:void(0);" title="订阅" class="orderBtn" onclick="subscribe();">订阅</a>
+            </div>
+
+            <div class="iconMap Right">
+                <a><img class="ic1" src="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/blank.gif" alt="送货服务" width="149" height="30"></a><a><img class="ic2" src="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/blank.gif" alt="30天退换" width="149" height="30"></a><a><img class="ic3" src="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/blank.gif" alt="正品保证" width="149" height="30"></a><a><img class="ic4" src="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/blank.gif" alt="买贵补差" width="149" height="30"></a><a><img class="ic5" src="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/blank.gif" alt="支付宝特约商家" width="149" height="30"></a>
+            </div>
+        </div>
+        <div class="w footer-copy">
+            <a href="http://www.o-j-o.cn/">OJO首页</a> |     <a href="http://www.o-j-o.cn/ojo_school.html">眼镜知识</a> |     <a href="http://www.o-j-o.cn/kuangjia">框架眼镜</a> |     <a href="http://www.o-j-o.cn/sun/">太阳眼镜</a> |     <a href="http://www.o-j-o.cn/yjp/">眼镜片</a> |     <a href="http://www.o-j-o.cn/ojoarc-8/19.html">友情链接</a> |     <a href="http://www.o-j-o.cn/ojoarc-2/4.html">联系我们</a> |     <a href="http://www.o-j-o.cn/ojoarc-7/18.html">投诉建议</a> |     <a href="http://www.o-j-o.cn/sitemap.xml">网站地图 </a>
+            <br>
+            © 2005-2019 OJO眼镜网 版权所有，并保留所有权利。<br>
+            E-mail: service@o-j-o.cn<br>
+            ICP备案证书号:<a href="http://www.miibeian.gov.cn/" target="_blank" rel="nofollow" style="color:#666">苏ICP备14046264号-1</a><br>
+        </div>
+    </div>
+    <div style="display:none">共执行 386 个查询，用时 0.067286 秒，在线 524 人，Gzip 已禁用，占用内存 10.877 MB<img src="%E8%B7%9F%E8%B8%AA%E5%8C%85%E8%A3%B9_files/cron.htm" alt="" style="width:0px;height:0px;"></div>
+    <script type="text/javascript" src="~/Pattern/眼镜/OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files/page_footer.js"></script>
+
+    <script type="text/javascript">
+
+        $.ajax({
+            type: "GET",
+            url: 'api/order_remind.php',
+            cache: false,
+            dataType: 'text',     //接受数据格式
+            data: '',
+            success: function () { }
+        });
+
+        //预售
+    </script>
+    <script type="text/javascript">
+        var msg_title_empty = "留言标题为空";
+        var msg_content_empty = "留言内容为空";
+        var msg_title_limit = "留言标题不能超过200个字";
+    </script>
+
+    <script type="text/javascript">
+        var msg_title_empty = "留言标题为空";
+        var msg_content_empty = "留言内容为空";
+        var msg_title_limit = "留言标题不能超过200个字";
+    </script>
+
+
+</body>
+</html>

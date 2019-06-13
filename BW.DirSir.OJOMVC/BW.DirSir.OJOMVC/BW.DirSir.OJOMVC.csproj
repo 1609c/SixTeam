@@ -131,8 +131,14 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\UnityMvcActivator.cs" />
+    <Compile Include="Controllers\FrameGlassesController.cs" />
     <Compile Include="Controllers\GlassesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MyopiaSunglassesController.cs" />
+    <Compile Include="Controllers\RegisterController.cs" />
+    <Compile Include="Controllers\ShoppingCartController.cs" />
+    <Compile Include="Controllers\TrackingPackageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -274,6 +280,7 @@
     <Content Include="Pattern\眼镜\OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files\base.css" />
     <Content Include="Pattern\眼镜\OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files\blank.gif" />
     <Content Include="Pattern\眼镜\OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files\captcha.php" />
+    <Content Include="Pattern\眼镜\OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files\captcha.png" />
     <Content Include="Pattern\眼镜\OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files\category_wide.css" />
     <Content Include="Pattern\眼镜\OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files\clickbtn_15.png" />
     <Content Include="Pattern\眼镜\OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files\closebtn_9.png" />
@@ -296,12 +303,14 @@
     <Content Include="Pattern\眼镜\OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files\jq.js" />
     <Content Include="Pattern\眼镜\OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files\jquery-1.4.2.flp.js" />
     <Content Include="Pattern\眼镜\OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files\jquery-1.8.2.min.js" />
+    <Content Include="Pattern\眼镜\OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files\jquery-1.js" />
     <Content Include="Pattern\眼镜\OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files\jquery.js" />
     <Content Include="Pattern\眼镜\OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files\jquery.json.js" />
     <Content Include="Pattern\眼镜\OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files\jquery.json.min.js" />
     <Content Include="Pattern\眼镜\OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files\jquery.lazyload.js" />
     <Content Include="Pattern\眼镜\OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files\jquery.more.cat.js" />
     <Content Include="Pattern\眼镜\OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files\jquery.SuperSlide.js" />
+    <Content Include="Pattern\眼镜\OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files\jquery_002.js" />
     <Content Include="Pattern\眼镜\OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files\kf_ivt_new.php" />
     <Content Include="Pattern\眼镜\OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files\loader.gif" />
     <Content Include="Pattern\眼镜\OJO眼镜网-专业网上配镜商城，买近视眼镜框，就上OJO！_files\meilele_category.js" />
@@ -367,6 +376,12 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Test.cshtml" />
     <Content Include="Views\Glasses\GetGlasses.cshtml" />
+    <Content Include="Views\TrackingPackage\TrackingPackageIndex.cshtml" />
+    <Content Include="Views\FrameGlasses\FrameGlassesIndex.cshtml" />
+    <Content Include="Views\Login\LoginIndex.cshtml" />
+    <Content Include="Views\MyopiaSunglasses\MyopiaSunglassesIndex.cshtml" />
+    <Content Include="Views\Register\RegisterIndex.cshtml" />
+    <Content Include="Views\ShoppingCart\ShoppingCartIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
