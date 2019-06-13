@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{79A09592-D46D-4C4D-A7FF-8953E2F705F0}</ProjectGuid>
+    <ProjectGuid>{0D7DC50C-66E5-42B4-838E-0BA5F653A387}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BW.DirSir.Repository</RootNamespace>
@@ -31,7 +31,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Dapper, Version=1.60.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.60.6\lib\net451\Dapper.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -41,19 +45,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DapperHelper.cs" />
+    <Compile Include="OrderRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BW.DirSir.Common\BW.DirSir.Common.csproj">
-      <Project>{f7c4c603-684b-43b0-ba24-24e4c9cf8b6c}</Project>
-      <Name>BW.DirSir.Common</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\BW.DirSir.IRepository\BW.DirSir.IRepository.csproj">
-      <Project>{4d5c6fea-cb13-471b-a34e-3bbf7faf7174}</Project>
+      <Project>{8BD97CAB-82B1-4702-952C-F55C981EFBF6}</Project>
       <Name>BW.DirSir.IRepository</Name>
     </ProjectReference>
     <ProjectReference Include="..\BW.DirSir.Model\BW.DirSir.Model.csproj">
-      <Project>{e97ac56b-960d-47d5-add0-7b10e55dc4bf}</Project>
+      <Project>{18B8FD4B-13C6-4A6C-A2EA-0E32926B2B46}</Project>
       <Name>BW.DirSir.Model</Name>
     </ProjectReference>
   </ItemGroup>

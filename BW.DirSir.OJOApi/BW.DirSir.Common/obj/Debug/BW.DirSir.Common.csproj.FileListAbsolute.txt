@@ -1,6 +1,5 @@
-D:\大二电商\BW.DirSir.OJOApi\BW.DirSir.Common\bin\Debug\BW.DirSir.Common.dll
-D:\大二电商\BW.DirSir.OJOApi\BW.DirSir.Common\bin\Debug\BW.DirSir.Common.pdb
-D:\大二电商\BW.DirSir.OJOApi\BW.DirSir.Common\obj\Debug\BW.DirSir.Common.csprojAssemblyReference.cache
-D:\大二电商\BW.DirSir.OJOApi\BW.DirSir.Common\obj\Debug\BW.DirSir.Common.csproj.CoreCompileInputs.cache
-D:\大二电商\BW.DirSir.OJOApi\BW.DirSir.Common\obj\Debug\BW.DirSir.Common.dll
-D:\大二电商\BW.DirSir.OJOApi\BW.DirSir.Common\obj\Debug\BW.DirSir.Common.pdb
+D:\学习\大二\BW.DirSir.OJOApi\BW.DirSir.Common\bin\Debug\BW.DirSir.Common.dll
+D:\学习\大二\BW.DirSir.OJOApi\BW.DirSir.Common\bin\Debug\BW.DirSir.Common.pdb
+D:\学习\大二\BW.DirSir.OJOApi\BW.DirSir.Common\obj\Debug\BW.DirSir.Common.csproj.CoreCompileInputs.cache
+D:\学习\大二\BW.DirSir.OJOApi\BW.DirSir.Common\obj\Debug\BW.DirSir.Common.dll
+D:\学习\大二\BW.DirSir.OJOApi\BW.DirSir.Common\obj\Debug\BW.DirSir.Common.pdb

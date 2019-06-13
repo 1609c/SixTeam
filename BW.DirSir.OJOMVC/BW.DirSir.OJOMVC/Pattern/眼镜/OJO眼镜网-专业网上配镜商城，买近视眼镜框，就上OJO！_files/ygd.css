@@ -1,0 +1,87 @@
+﻿
+*{margin:0;padding:0;}
+
+html{background-attachment:fixed;}
+
+body          { font:12px/1.55 "微软雅黑",Arial,Helvetica, sans-serif;color:#2f2f2f;}
+
+img           {border:0;vertical-align:top;display:block;}
+
+a{color:#000;text-decoration:none;cursor:pointer}
+a:focus        {outline:0;}
+
+
+
+select{ padding:1px; background: #eef7fe; border:1px #999 solid;}
+
+select option {
+    padding-right: 10px;
+	background: #eef7fe;
+}
+
+
+/* Lists */
+ul,ol         {list-style:none;}
+
+
+
+.v-top        {vertical-align:top;}
+.v-middle     {vertical-align:middle;display:inline;}
+.f-left,
+.left         {float:left !important;}
+.f-right,
+.right        {float:right !important;}
+
+
+
+
+
+
+#ojoygd .button {overflow:visible;width:auto;border:0;padding:0;margin:0;background:transparent;cursor:pointer;}
+#ojoygd .button span {display:block;text-align:center;white-space:nowrap;color:#fff; line-height:30px; height:30px;width:90px;font-size:14px;background:url(../images/button_2014.jpg) no-repeat;}
+
+
+#ojoygd .buttons-set-order {margin:10px 0 0;}
+#ojoygd .buttons-set-order .please-wait {padding:12px 7px 0 0;}
+#ojoygd .fieldset {width:750px;height:auto;padding:0px;margin:auto;font-size:14px}
+#ojoygd .fieldset .fieldset-content{height:auto;float:left;padding:20px 0px;width:768px;}
+#ojoygd .fieldset-content .form-list{padding:0px;margin:0px;}
+#ojoygd .fieldset-title-login{height:33px;color:#FF0000;padding-left:575px;font-size:12px;line-height:33px;}
+#ojoygd .form-list input.input-text1 {width:70px;height:18px;border:1px solid #999999;}
+
+
+
+#ojoygd .prescription_form{background:#ededed;width:750px;height:95px;padding:30px 0 50px}
+#cart_prescription_form_submit span{ background-position:-86px -173px;width:71px;height:24px;}
+#cart_prescription_form_cancel span{ background-position:-168px -173px;width:71px;height:25px;}
+#ojoygd .prescription_form ul li{float:left; padding:0 15px;height:85px; width:80px;}
+#ojoygd .prescription_form ul li dd{padding:5px 0;}
+#ojoygd .lightingbox_bottom{width:408px; padding-left:15px; margin-bottom:10px;}
+#ojoygd .cart_prescription_select{left:20px;_left:-330px;position: absolute;top: 20px;}
+
+#ojoygd .prescription_form ul li.mid,
+#ojoygd .prescription-form ul li.mid{border-left:1px solid #494949;height:80px;padding:0;}
+#ojoygd .prescription_form ul li.mid span,
+#ojoygd .prescription-form ul li.mid span{background:url(../images/cyl.png) no-repeat;width:62px;height:22px;display:block;margin:15px 0 0;text-align:center;color:#fff}
+
+
+
+button.button2 {overflow:visible;width:auto;border:0;padding:0;margin:0;background:transparent;cursor:pointer;background-image: url(../images/btn_consignee.gif);
+    width: 54px;
+    background-position: 0 -29px;
+    height: 21px;
+    line-height: 21px;
+    color: #fff;
+    font-family: 微软雅黑;
+    font-size: 12px;
+	margin-right:30px;}
+button.button2 span {display:block;text-align:center;white-space:nowrap;color:#fff; line-height:30px; height:30px;width:90px;font-size:14px;background:url(../images/button_2014.jpg) no-repeat;}
+
+
+/* New table*/
+.new-table{width:100%;font-size:14px;}
+.new-table thead th{background:#ededed;padding:5px 0;text-align:center;}
+.new-table tr td{text-align:center;border-bottom:1px dashed #bbbbbc;padding:5px 0}
+
+
+

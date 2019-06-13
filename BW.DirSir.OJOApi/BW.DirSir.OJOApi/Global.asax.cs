@@ -13,16 +13,17 @@ namespace BW.DirSir.OJOApi
     {
         protected void Application_Start()
         {
+            AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
+            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+            RouteConfig.RegisterRoutes(RouteTable.Routes);
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
 
         /// <summary>
         /// 跨域设置
         /// </summary>
         protected void Application_BeginRequest()
-
-
-
         {
             //OPTIONS请求方法的主要作用：
             //1、获取服务器支持的HTTP请求方法；也是黑客经常使用的方法。

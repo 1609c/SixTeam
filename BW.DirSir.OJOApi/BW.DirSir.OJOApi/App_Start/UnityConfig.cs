@@ -1,5 +1,3 @@
-using BW.DirSir.IRepository;
-using BW.DirSir.Repository;
 using System;
 
 using Unity;
@@ -44,7 +42,7 @@ namespace BW.DirSir.OJOApi
 
             // TODO: Register your type's mappings here.
             // container.RegisterType<IProductRepository, ProductRepository>();
-            container.RegisterType<IClassRepository, ClassRepository>();
+            //container.RegisterType<IOrderRepository, OrdersRepository>();
         }
     }
 }

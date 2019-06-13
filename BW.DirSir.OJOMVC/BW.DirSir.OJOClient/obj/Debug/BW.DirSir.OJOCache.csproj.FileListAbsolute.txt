@@ -4,3 +4,9 @@ D:\大二电商\BW.DirSir.OJOMVC\BW.DirSir.OJOClient\obj\Debug\BW.DirSir.OJOCach
 D:\大二电商\BW.DirSir.OJOMVC\BW.DirSir.OJOClient\obj\Debug\BW.DirSir.OJOClient.dll
 D:\大二电商\BW.DirSir.OJOMVC\BW.DirSir.OJOClient\obj\Debug\BW.DirSir.OJOClient.pdb
 D:\大二电商\BW.DirSir.OJOMVC\BW.DirSir.OJOClient\obj\Debug\BW.DirSir.OJOCache.csprojAssemblyReference.cache
+D:\OJO眼镜\SixTeam\BW.DirSir.OJOMVC\BW.DirSir.OJOClient\bin\Debug\BW.DirSir.OJOClient.dll
+D:\OJO眼镜\SixTeam\BW.DirSir.OJOMVC\BW.DirSir.OJOClient\bin\Debug\BW.DirSir.OJOClient.pdb
+D:\OJO眼镜\SixTeam\BW.DirSir.OJOMVC\BW.DirSir.OJOClient\obj\Debug\BW.DirSir.OJOCache.csproj.CoreCompileInputs.cache
+D:\OJO眼镜\SixTeam\BW.DirSir.OJOMVC\BW.DirSir.OJOClient\obj\Debug\BW.DirSir.OJOClient.dll
+D:\OJO眼镜\SixTeam\BW.DirSir.OJOMVC\BW.DirSir.OJOClient\obj\Debug\BW.DirSir.OJOClient.pdb
+D:\OJO眼镜\SixTeam\BW.DirSir.OJOMVC\BW.DirSir.OJOClient\obj\Debug\BW.DirSir.OJOCache.csprojAssemblyReference.cache

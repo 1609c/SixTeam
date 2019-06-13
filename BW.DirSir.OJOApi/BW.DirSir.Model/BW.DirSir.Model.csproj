@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E97AC56B-960D-47D5-ADD0-7B10E55DC4BF}</ProjectGuid>
+    <ProjectGuid>{18B8FD4B-13C6-4A6C-A2EA-0E32926B2B46}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BW.DirSir.Model</RootNamespace>
@@ -41,8 +41,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class.cs" />
+    <Compile Include="Borders\Border.cs" />
+    <Compile Include="Brands\Brand.cs" />
+    <Compile Include="Categorys\Category.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="Commoditys\Commodity.cs" />
+    <Compile Include="Cribs\Crib.cs" />
+    <Compile Include="Crowds\Crowd.cs" />
+    <Compile Include="Dto\OrdersDto.cs" />
+    <Compile Include="Functionals\Functional.cs" />
+    <Compile Include="Orderses\Orders.cs" />
+    <Compile Include="Pictures\Picture.cs" />
+    <Compile Include="Prices\Price.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Refractivitys\Refractivity.cs" />
+    <Compile Include="Sphes\Sphs.cs" />
+    <Compile Include="Styles\Style.cs" />
+    <Compile Include="Textures\Texture.cs" />
+    <Compile Include="Typelists\Typelist.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
